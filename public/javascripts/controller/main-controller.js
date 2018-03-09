@@ -182,7 +182,7 @@ mainApp.factory('mainService', function ($http, $rootScope, $location) {
   }
 });
 
-
+//作品
 mainApp.controller('worksController', function ($scope, $http, mainService, $rootScope) {
   var cid = mainService.getQueryStringByName('cid');
 
@@ -225,6 +225,52 @@ mainApp.controller('worksController', function ($scope, $http, mainService, $roo
   }
 });
 
+//相册
+mainApp.controller('photoController', function ($scope, $http, mainService, $rootScope) {
+  var cid = mainService.getQueryStringByName('cid');
+
+  $scope.getDocumentByCId = getDocumentByCId;
+  $scope.getDocumentById = getDocumentById;
+  $scope.option = {};
+  init();
+
+  function init() {
+    getDocumentByCId(cid, 1);
+  }
+
+  function getDocumentByCId(cid, pageIndex) {
+    mainService.getDocumentByCId(cid, pageIndex, function (res) {
+      $scope.list = res.data.data;
+      console.log($scope.list);
+      //设置分页的参数
+      $scope.option = {
+        curr: $scope.list.currentPage,  //当前页数
+        all: $scope.list.totalPages,  //总页数
+        count: $scope.list.pageSize,  //最多显示的页数，默认为10
+
+        //点击页数的回调函数，参数page为点击的页数
+        click: function (page) {
+          getDocumentByCId(cid, page);
+          //这里可以写跳转到某个页面等...
+        }
+      }
+    }, function (err) {
+      console.log(JSON.stringify(err));
+    })
+  }
+
+  function getDocumentById(id) {
+    mainService.getDocumentById(id, function (res) {
+      $rootScope.detail = res.data.data;
+      $rootScope.detail.atlas = JSON.parse($rootScope.detail.atlas);
+      console.log($rootScope.detail);
+    }, function (err) {
+      console.log(JSON.stringify(err));
+    })
+  }
+});
+
+//学术
 mainApp.controller('researchController', function ($scope, $http, mainService, $rootScope) {
   var cid = mainService.getQueryStringByName('cid');
 
@@ -271,6 +317,7 @@ mainApp.controller('researchController', function ($scope, $http, mainService, $
   }
 });
 
+//动态
 mainApp.controller('newsController', function ($scope, $http, mainService, $rootScope) {
   var cid = mainService.getQueryStringByName('cid');
   $scope.cid = cid;
@@ -319,6 +366,7 @@ mainApp.controller('newsController', function ($scope, $http, mainService, $root
   }
 });
 
+//文章详情
 mainApp.controller('articleController', function ($scope, $http, mainService, $sce) {
 
   function init() {
@@ -339,7 +387,7 @@ mainApp.controller('articleController', function ($scope, $http, mainService, $s
   init();
 });
 
-
+//衍生品
 mainApp.controller('derivativeController', function ($scope, $http, mainService, $rootScope) {
   var cid = mainService.getQueryStringByName('cid');
   $scope.option = {};
@@ -383,6 +431,7 @@ mainApp.controller('derivativeController', function ($scope, $http, mainService,
   }
 });
 
+//作品详情
 mainApp.controller('productDetailController', function ($scope, $http, mainService, $rootScope) {
   var id = mainService.getQueryStringByName('id');
 
@@ -403,3 +452,4 @@ mainApp.controller('productDetailController', function ($scope, $http, mainServi
     })
   }
 });
+
