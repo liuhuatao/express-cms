@@ -382,3 +382,24 @@ mainApp.controller('derivativeController', function ($scope, $http, mainService,
     })
   }
 });
+
+mainApp.controller('productDetailController', function ($scope, $http, mainService, $rootScope) {
+  var id = mainService.getQueryStringByName('id');
+
+  $scope.getDocumentById = getDocumentById;
+  init();
+
+  function init() {
+    getDocumentById(id);
+  }
+
+  function getDocumentById(id) {
+    mainService.getDocumentById(id, function (res) {
+      $scope.detail = res.data.data;
+      $scope.detail.atlas = JSON.parse($scope.detail.atlas);
+      console.log($scope.detail);
+    }, function (err) {
+      console.log(JSON.stringify(err));
+    })
+  }
+});

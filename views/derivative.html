@@ -31,11 +31,11 @@
 									<div class="col-md-4 col-sm-6" ng-repeat="item in list.data">
 										<div class="product-wrapper mb-40">
 											<div class="product-img">
-												<a href="product-details.html"><img ng-src="{% raw %}{{item.imgurl[0]}}{% endraw %}" alt="" /></a>
+												<a ng-href="{%raw%}{{'product-details.html?id='+item.id}}{%endraw%}"><img ng-src="{% raw %}{{item.imgurl[0]}}{% endraw %}" alt="" /></a>
 											</div>
 											<div class="product-content">
 												<div class="pro-title">
-													<h3><a href="product-details.html" ng-bind="item.title">标题写在这里 </a></h3>
+													<h3><a ng-href="{%raw%}{{'product-details.html?id='+item.id}}{%endraw%}" ng-bind="item.title">标题写在这里 </a></h3>
 												</div>
 											</div>
 										</div>

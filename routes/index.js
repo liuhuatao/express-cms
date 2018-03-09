@@ -24,6 +24,10 @@ router.get('/derivative.html', function (req, res, next) {
   res.locals.router = 'derivative';
   res.render('derivative.html', {title: 'Express'});
 });
+router.get('/product-details.html', function (req, res, next) {
+  res.locals.router = 'derivative';
+  res.render('product-details.html', {title: 'Express'});
+});
 router.get('/director.html', function (req, res, next) {
   res.locals.router = 'director';
   res.render('director.html', {title: 'Express'});
