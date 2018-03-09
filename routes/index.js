@@ -32,6 +32,10 @@ router.get('/news.html', function (req, res, next) {
   res.locals.router = 'news';
   res.render('news.html', {title: 'Express'});
 });
+router.get('/article.html', function (req, res, next) {
+  res.locals.router = 'news';
+  res.render('article.html', {title: 'Express'});
+});
 router.get('/photo.html', function (req, res, next) {
   res.locals.router = 'about';
   res.render('photo.html', {title: 'Express'});

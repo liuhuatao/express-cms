@@ -50,4 +50,6 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+console.info('http://0.0.0.0:3000');
+
 module.exports = app;

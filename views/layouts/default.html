@@ -75,9 +75,7 @@
                                     <li>
                                         <a href="news.html" ng-class="isActive('news')">动态</a>
                                         <ul class="submenu">
-                                            <li><a href="news.html">新闻</a></li>
-                                            <li><a href="news-notice.html">公告</a></li>
-                                            <li><a href="news-report.html">媒体报道</a></li>
+                                            <li ng-repeat="item in categoryList[3].children"><a ng-href="{% raw %}{{'news.html?cid='+item.id}}{% endraw %}" ng-bind="item.name">新闻</a></li>
                                         </ul>
                                     </li>
                                     <li>

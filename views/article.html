@@ -1,0 +1,39 @@
+{% extends "layouts/default.html" %}
+
+{% block content %}
+<!-- breadcrumb start -->
+<div class="breadcrumb-area">
+    <div class="container">
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-home"></i></a></li>
+            <li><a href="#">动态</a></li>
+            <li class="active">新闻</li>
+        </ol>
+    </div>
+</div>
+<!-- breadcrumb end -->
+<!-- shop-area start -->
+<div class="blog-area"  ng-controller="articleController">
+    <div class="container container-ms">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <div class="blog-wrapper blog-main mb-40">
+                    <!--<div class="blog-img">-->
+                        <!--<a href="#"><img alt="" src="img/blog/1.jpg"></a>-->
+                    <!--</div>-->
+                    <div class="blog-info article">
+                        <h3><a href="javasript:;" ng-bind="article.title"></a></h3>
+                        <div class="blog-meta blog-large">
+                            <span><i class="fa fa-clock-o" aria-hidden="true"></i> {% raw %}{{article.create_time|date:'yyyy.MM.dd'}}{% endraw %}</span>
+                            <span class="ml-15"><i class="fa fa-user-circle-o" aria-hidden="true"></i>淳子</span>
+                        </div>
+                        <div ng-bind-html="article.content">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

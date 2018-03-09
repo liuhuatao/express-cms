@@ -2,47 +2,32 @@
 
 {% block content %}
 <!-- news list start -->
-<div class="blog-area mt-50">
+<div class="blog-area mt-50" ng-controller="newsController">
     <div class="container">
         <div class="row">
             <div class="col-md-3 col-sm-3 mb-40">
                 <div class="column new-column">
                     <div class="sidebar-widget">
                         <ul class="sidebar-menu">
-                            <li class="active"><a href="#">新闻<span><i class="fa fa-angle-right"></i></span></a></li>
-                            <li><a href="#">公告 <span><i class="fa fa-angle-right"></i></span></a></li>
-                            <li><a href="#">媒体报道<span><i class="fa fa-angle-right"></i></span></a></li>
+                            <li ng-class="cid==144?'active':''"><a href="/news.html?cid=144">新闻<span><i class="fa fa-angle-right"></i></span></a></li>
+                            <li ng-class="cid==145?'active':''"><a href="/news.html?cid=145">公告 <span><i class="fa fa-angle-right"></i></span></a></li>
+                            <li ng-class="cid==146?'active':''"><a href="/news.html?cid=146">媒体报道<span><i class="fa fa-angle-right"></i></span></a></li>
                         </ul>
                     </div>
 
                 </div>
             </div>
             <div class="col-md-9 col-sm-9">
-                <div class="blog-wrapper blog-main mb-40">
+                <div class="blog-wrapper blog-main mb-40" ng-repeat="item in list.data">
                     <div class="blog-img">
-                        <a href="#"><img alt="" src="img/blog/1.jpg"></a>
+                        <a href="#"><img alt="" ng-src="{% raw %}{{item.imgurl[0]}}{% endraw %}"></a>
                     </div>
                     <div class="blog-info">
-                        <h3><a href="#">陈俊毅的油画《未完成》和拉威尔的《波莱罗舞曲》</a></h3>
+                        <h3><a ng-href="{% raw %}{{'/article.html?id='+item.id}}{% endraw %}" ng-bind="item.title">陈俊毅的油画《未完成》和拉威尔的《波莱罗舞曲》</a></h3>
                         <div class="blog-meta blog-large">
-                            <span><a href="#"><i class="fa fa-clock-o" aria-hidden="true"></i> 2018.03.03</a></span>
+                            <span><a href="#"><i class="fa fa-clock-o" aria-hidden="true"></i> {% raw %}{{item.create_time|date:'yyyy.MM.dd'}}{% endraw %}</a></span>
                         </div>
-                        <p>厨房灯火通明，煤气炉上炖着五花肉百叶结。有朋友在，温了绍兴花雕，忽然想起，按照本家传统，应该红枣黄芪炖冰糖的。这就去储藏室取红枣。一包红枣，一失手，滚落一地。他并不着急去捡拾，却是绕着满地红枣道：“你看，自由落体以后的形态有人类美学无法企及的构图和造型，有着随意和偶然的效果，抽象既不拘一格，又蕴积着自然法则自在的、内在的逻辑。象从意生，这就是抽象艺术。”</p>
-                        <div class="read-more">
-                            <a href="article001.html">阅读全文 </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="blog-wrapper blog-main mb-40">
-                    <div class="blog-img">
-                        <a href="#"><img alt="" src="img/blog/1.jpg"></a>
-                    </div>
-                    <div class="blog-info">
-                        <h3><a href="#">陈俊毅的油画《未完成》和拉威尔的《波莱罗舞曲》</a></h3>
-                        <div class="blog-meta blog-large">
-                            <span><a href="#"><i class="fa fa-clock-o" aria-hidden="true"></i> 2018.03.03</a></span>
-                        </div>
-                        <p>厨房灯火通明，煤气炉上炖着五花肉百叶结。有朋友在，温了绍兴花雕，忽然想起，按照本家传统，应该红枣黄芪炖冰糖的。这就去储藏室取红枣。一包红枣，一失手，滚落一地。他并不着急去捡拾，却是绕着满地红枣道：“你看，自由落体以后的形态有人类美学无法企及的构图和造型，有着随意和偶然的效果，抽象既不拘一格，又蕴积着自然法则自在的、内在的逻辑。象从意生，这就是抽象艺术。”</p>
+                        <p ng-bind="item.description"></p>
                         <div class="read-more">
                             <a href="article001.html">阅读全文 </a>
                         </div>

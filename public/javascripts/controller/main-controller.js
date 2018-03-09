@@ -270,4 +270,72 @@ mainApp.controller('researchController', function ($scope, $http, mainService, $
   }
 });
 
+mainApp.controller('newsController', function ($scope, $http, mainService, $rootScope) {
+  var cid = mainService.getQueryStringByName('cid');
+  $scope.cid=cid;
+
+  $scope.getDocumentById = getDocumentById;
+  // $scope.option = {
+  //   curr: 0,  //当前页数
+  //   all: 0,  //总页数
+  //   count: 0 //最多显示的页数，默认为10
+  // };
+  init();
+
+  function init() {
+    getDocumentByCId(cid, 1);
+  }
+
+  function getDocumentByCId(cid, pageIndex) {
+    mainService.getDocumentByCId(cid, pageIndex, function (res) {
+      $scope.list = res.data.data;
+      console.log($scope.list);
+      //设置分页的参数
+      $scope.option = {
+        curr: $scope.list.currentPage,  //当前页数
+        all: $scope.list.totalPages,  //总页数
+        count: $scope.list.pageSize,  //最多显示的页数，默认为10
+
+        //点击页数的回调函数，参数page为点击的页数
+        click: function (page) {
+          console.log(page);
+          //这里可以写跳转到某个页面等...
+        }
+      }
+    }, function (err) {
+      console.log(JSON.stringify(err));
+    })
+  }
+
+  function getDocumentById(id) {
+    mainService.getDocumentById(id, function (res) {
+      $rootScope.detail = res.data.data;
+      $rootScope.detail.atlas = JSON.parse($rootScope.detail.atlas);
+      console.log($rootScope.detail);
+    }, function (err) {
+      console.log(JSON.stringify(err));
+    })
+  }
+});
+
+mainApp.controller('articleController', function ($scope, $http, mainService, $sce) {
+
+  function init() {
+    var id = mainService.getQueryStringByName('id');
+    getArticleById(id);
+  }
+
+  function getArticleById(id) {
+    mainService.getDocumentById(id, function (res) {
+      $scope.article = res.data.data;
+      $scope.article.content = $sce.trustAsHtml($scope.article.content);
+      console.log($scope.article);
+    }, function (err) {
+      console.log(JSON.stringify(err));
+    })
+  }
+
+  init();
+});
+
 
