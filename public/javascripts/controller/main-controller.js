@@ -94,6 +94,7 @@ mainApp.controller('bodyController', function ($rootScope, $scope, mainService) 
   function getAllCategory() {
     mainService.getAllCategory(function (res) {
       $scope.categoryList = res.data.data;
+      console.log($scope.categoryList);
     }, function (err) {
       console.log(JSON.stringify(err));
     })
@@ -272,7 +273,7 @@ mainApp.controller('researchController', function ($scope, $http, mainService, $
 
 mainApp.controller('newsController', function ($scope, $http, mainService, $rootScope) {
   var cid = mainService.getQueryStringByName('cid');
-  $scope.cid=cid;
+  $scope.cid = cid;
 
   $scope.getDocumentById = getDocumentById;
   // $scope.option = {
@@ -339,3 +340,45 @@ mainApp.controller('articleController', function ($scope, $http, mainService, $s
 });
 
 
+mainApp.controller('derivativeController', function ($scope, $http, mainService, $rootScope) {
+  var cid = mainService.getQueryStringByName('cid');
+  $scope.option = {};
+  $scope.getDocumentById = getDocumentById;
+  $scope.getDocumentByCId = getDocumentByCId;
+  $scope.option = {};
+  init();
+
+  function init() {
+    getDocumentByCId(cid, 1);
+  }
+
+  function getDocumentByCId(cid, pageIndex) {
+    mainService.getDocumentByCId(cid, pageIndex, function (res) {
+      $scope.list = res.data.data;
+      $scope.option = {
+        curr: $scope.list.currentPage,  //当前页数
+        all: $scope.list.totalPages,  //总页数
+        count: $scope.list.pageSize,  //最多显示的页数，默认为10
+
+        //点击页数的回调函数，参数page为点击的页数
+        click: function (page) {
+          getDocumentByCId(cid, page);
+          //这里可以写跳转到某个页面等...
+        }
+      };
+      console.log($scope.list);
+    }, function (err) {
+      console.log(JSON.stringify(err));
+    })
+  }
+
+  function getDocumentById(id) {
+    mainService.getDocumentById(id, function (res) {
+      $rootScope.detail = res.data.data;
+      $rootScope.detail.atlas = JSON.parse($rootScope.detail.atlas);
+      console.log($rootScope.detail);
+    }, function (err) {
+      console.log(JSON.stringify(err));
+    })
+  }
+});
