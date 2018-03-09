@@ -1,0 +1,56 @@
+﻿{% extends "layouts/default.html" %}
+
+{% block content %}
+<!-- contact-area start -->
+<div class="contact-area ptb-60">
+	<div class="container">
+		<div class="row">
+			<!-- contact-info start -->
+			<div class="col-md-6 col-sm-12 col-xs-12">
+				<div class="contact-info">
+					<h3>联系方式</h3>
+					<ul>
+
+						<li>
+							<i class="fa fa-weixin"></i> <strong>微信公众号</strong>
+							搜索“陈俊毅艺术世界”或扫下面二维码关注公众号 ↓
+						</li>
+						<li>
+							<img src="img/erweima.jpg" alt="" style="display:block;margin: 10px auto;">
+						</li>
+						<li>
+							<i class="fa fa-envelope"></i> <strong>Email</strong>
+							<a href="#">jbcusa@qq.com</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- contact-info end -->
+			<div class="col-md-6 col-sm-12 col-xs-12">
+				<div class="contact-form">
+					<h3><i class="fa fa-envelope-o"></i> 留言</h3>
+					<div class="row">
+						<form id="contact-form" action="mail.php" method="post">
+							<div class="col-md-6 col-sm-6 col-xs-12">
+								<input name="name" type="text" placeholder="姓名" />
+							</div>
+							<div class="col-md-6 col-sm-6 col-xs-12">
+								<input name="email" type="email" placeholder="Email" />
+							</div>
+							<div class="col-md-12 col-sm-12 col-xs-12">
+								<input name="subject" type="text" placeholder="标题" />
+							</div>
+							<div class="col-md-12 col-sm-12 col-xs-12">
+								<textarea name="message" id="message" cols="30" rows="10" placeholder="内容"></textarea>
+								<input type="submit" value="发送消息" />
+							</div>
+						</form>
+						<p class="form-messege"></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- contact-area end -->
+{% endblock %}

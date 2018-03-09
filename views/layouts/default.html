@@ -1,0 +1,209 @@
+<!doctype html>
+<html class="no-js" lang="en" ng-app="mainApp">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>陈俊毅艺术世界</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- favicon
+    ============================================ -->
+    <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.png">
+
+    <!-- All css files are included here. -->
+    <!-- Bootstrap fremwork main css -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <!-- This core.css file contents all plugings css file. -->
+    <link rel="stylesheet" href="/css/core.css">
+    <!-- Theme shortcodes/elements style -->
+    <link rel="stylesheet" href="/css/shortcode/shortcodes.css">
+    <!-- Theme main style -->
+    <link rel="stylesheet" href="/style.css">
+    <!-- Responsive css -->
+    <link rel="stylesheet" href="/css/responsive.css">
+    <!-- User style -->
+    <link rel="stylesheet" href="/css/custom.css">
+
+    <!-- Modernizr JS -->
+    <script src="/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+
+<body ng-controller="bodyController">
+<!--[if lt IE 8]>
+<p class="browserupgrade">您正在使用 <strong>过时的</strong>浏览器.请 <a href="http://browsehappy.com/">点击这里</a> 升级您的浏览器</p>
+<![endif]-->
+<!-- Body main wrapper start -->
+<div class="wrapper">
+    <!-- Start of header area -->
+    <header class="header-pos elements1">
+        <div class="header-area header-middle">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-2 col-sm-3 col-xs-12">
+                        <div class="logo">
+                            <a href="index.html"><img src="img/logo/logo-black.png" alt=""/></a>
+                        </div>
+                    </div>
+                    <div class="col-md-8 col-sm-6 col-xs-12 text-right xs-center">
+                        <div class="main-menu display-inline hidden-sm hidden-xs">
+                            <nav>
+                                <ul>
+                                    <li><a href="index.html">首页</a>
+                                    </li>
+                                    <li><a href="works.html?cid=1" ng-class="isActive('works')">作品</a>
+                                        <ul class="submenu">
+                                            <li ng-repeat="item in categoryList[0].children"><a ng-href="{% raw %}{{'works.html?cid='+item.id}}{% endraw %}" ng-bind="item.name"></a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="director.html" ng-class="isActive('director')">导演</a>
+                                    </li>
+                                    <li>
+                                        <a href="about.html" ng-class="isActive('about')">关于</a>
+                                        <ul class="submenu">
+                                            <li><a href="about.html">个人简介</a></li>
+                                            <li><a href="photo.html">相册</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="research.html"  ng-class="isActive('research')">学术</a>
+                                        <ul class="submenu">
+                                            <li ng-repeat="item in categoryList[2].children"><a ng-href="{% raw %}{{'research.html?cid='+item.id}}{% endraw %}"ng-bind="item.name">艺术评论</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="news.html" ng-class="isActive('news')">动态</a>
+                                        <ul class="submenu">
+                                            <li><a href="news.html">新闻</a></li>
+                                            <li><a href="news-notice.html">公告</a></li>
+                                            <li><a href="news-report.html">媒体报道</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="derivative.html"  ng-class="isActive('derivative')">衍生品</a>
+                                        <ul class="submenu">
+                                            <li><a href="derivative.html">服装</a></li>
+                                            <li><a href="derivative-ornaments.html">配饰</a></li>
+                                            <li><a href="derivative-decoration.html">摆件</a></li>
+                                            <li><a href="derivative-carpet.html">地毯</a></li>
+                                            <li><a href="derivative-bag.html">箱包</a></li>
+                                            <li><a href="derivative-tapestry.html">挂毯</a></li>
+                                            <li><a href="derivative-furniture.html">家具</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="contact.html"  ng-class="isActive('contact')">联系</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+
+                    </div>
+                    <div class="col-md-2 col-sm-3 col-xs-12">
+                        <div class="shopping-cart display-inline">
+                            <a href="#">选择语言：<b>中文<i class="fa fa-angle-down ml-15"></i></b></a>
+                            <ul class="">
+                                <li>
+                                    <div class="cart-content">
+                                        <h3><a href="#"> 中文</a></h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cart-content">
+                                        <h3><a href="#">英文</a></h3>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header end -->
+    <div class="space-custom elements1"></div>
+    <!-- End of header area -->
+    <!-- End  page banner -->
+    <!-- shop-area start -->
+    {% block content %}{% endblock %}
+    <!-- shop-area end -->
+    <!-- End page content -->
+    <!-- Start footer area -->
+    <footer class="black-bg">
+        <div class="footer-bootom-area ptb-15">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="copyright">
+                            <p>陈俊毅艺术世界版权所有</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="payment">
+                            <p>网站建设： </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End footer area -->
+    <!-- Modal -->
+    <div class="modal fade" id="productModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">x</span></button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-img">
+                        <a href="shop.html"><img ng-src="{% raw %}{{apiUrl+detail.atlas[0].src}}{% endraw %}"
+                                                 alt=""/></a>
+                    </div>
+                    <div class="modal-pro-content">
+                        <h3><a href="single-product.html">Phasellus Vel Hendrerit</a></h3>
+                        <div class="price">
+                            <span ng-bind="detail.title">标题写在这</span>
+                        </div>
+                        <p ng-bind="detail.atlas[0].info">
+                            《朱鹮之”情敌”》，为了完成这幅作品（事先没有具象定势创意），民工们在美国加拿大边境尼亚加拉大瀑布临时筑巢了水下画室；陈大师就在这个规定情景扑捉创作灵感；进入水下画室一週后的他，突然把眼中高峰垂直落体的瀑布强大气流错觉顿生灵感——自己以其长年炼达的东方气韵挥毫入轨并以嫺熟轻盈的西方神韵瞬间佈局一气呵成的“瀑布写生”令自己怀疑这是否是沉浸梦境中的神来之笔？！当陈大师拿著这张《朱鹮之“情敌”》给日本抽象美术爱好者授课展示时，全场除了闪光灯就是长时间的掌声了……迄今为止已经有许多海内外”粉丝”开始跟踪这隻“情敌”了；泰国皇家藏品中国顾问芮世奇先生只是看到仿製品就惊歎道：世界瑰宝啊！</p>
+                        <form action="#">
+                            <button>艺术评论</button>
+                        </form>
+                        <div class="product_meta">
+                            <span class="posted_in">陈俊毅艺术世界版权所有，未经允许不得转载，禁止商用！</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal end -->
+</div>
+<!-- Body main wrapper end -->
+
+
+<!-- jquery latest version -->
+<script src="/js/vendor/jquery-1.12.0.min.js"></script>
+<!-- Bootstrap framework js -->
+<script src="/js/bootstrap.min.js"></script>
+<!-- ajax-mail js -->
+<script src="/js/ajax-mail.js"></script>
+<!-- owl.carousel js -->
+<script src="/js/owl.carousel.min.js"></script>
+<!-- jquery.nivo.slider js -->
+<script src="/js/jquery.nivo.slider.pack.js"></script>
+<!-- All js plugins included in this file. -->
+<script src="/js/plugins.js"></script>
+<!-- Main js file that contents all jQuery plugins activation. -->
+<script src="/js/main.js"></script>
+
+<script src="/js/angularjs/angular.js"></script>
+<script src="/javascripts/controller/main-controller.js"></script>
+<script>
+    var router = '{{router}}';
+</script>
+
+</body>
+
+</html>
