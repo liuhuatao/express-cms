@@ -53,7 +53,9 @@
                                     </li>
                                     <li><a href="works.html?cid=1" ng-class="isActive('works')">作品</a>
                                         <ul class="submenu">
-                                            <li ng-repeat="item in categoryList[0].children"><a ng-href="{% raw %}{{'works.html?cid='+item.id}}{% endraw %}" ng-bind="item.name"></a></li>
+                                            <li ng-repeat="item in categoryList[0].children"><a
+                                                    ng-href="{% raw %}{{'works.html?cid='+item.id}}{% endraw %}"
+                                                    ng-bind="item.name"></a></li>
                                         </ul>
                                     </li>
                                     <li>
@@ -67,44 +69,51 @@
                                         </ul>
                                     </li>
                                     <li>
-                                        <a href="research.html"  ng-class="isActive('research')">学术</a>
+                                        <a href="research.html" ng-class="isActive('research')">学术</a>
                                         <ul class="submenu">
-                                            <li ng-repeat="item in categoryList[2].children"><a ng-href="{% raw %}{{'research.html?cid='+item.id}}{% endraw %}"ng-bind="item.name">艺术评论</a></li>
+                                            <li ng-repeat="item in categoryList[2].children"><a
+                                                    ng-href="{% raw %}{{'research.html?cid='+item.id}}{% endraw %}"
+                                                    ng-bind="item.name">艺术评论</a></li>
                                         </ul>
                                     </li>
                                     <li>
                                         <a href="news.html?cid=144" ng-class="isActive('news')">动态</a>
                                         <ul class="submenu">
-                                            <li ng-repeat="item in categoryList[3].children"><a ng-href="{% raw %}{{'news.html?cid='+item.id}}{% endraw %}" ng-bind="item.name">新闻</a></li>
+                                            <li ng-repeat="item in categoryList[3].children"><a
+                                                    ng-href="{% raw %}{{'news.html?cid='+item.id}}{% endraw %}"
+                                                    ng-bind="item.name">新闻</a></li>
                                         </ul>
                                     </li>
                                     <li>
-                                        <a ng-href="{% raw %}{{'derivative.html?cid='+categoryList[4].children[0].children[0].id}}{% endraw %}"  ng-class="isActive('derivative')">衍生品</a>
+                                        <a ng-href="{% raw %}{{'derivative.html?cid='+categoryList[4].children[0].children[0].id}}{% endraw %}"
+                                           ng-class="isActive('derivative')">衍生品</a>
                                         <ul class="submenu">
-                                            <li ng-repeat="item in categoryList[4].children"><a ng-href="{% raw %}{{'derivative.html?cid='+item.id}}{% endraw %}" ng-bind="item.name">服装</a></li>
+                                            <li ng-repeat="item in categoryList[4].children"><a
+                                                    ng-href="{% raw %}{{'derivative.html?cid='+item.id}}{% endraw %}"
+                                                    ng-bind="item.name">服装</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="contact.html"  ng-class="isActive('contact')">联系</a></li>
+                                    <li><a href="contact.html" ng-class="isActive('contact')">联系</a></li>
                                 </ul>
                             </nav>
                         </div>
 
                     </div>
                     <div class="col-md-2 col-sm-3 col-xs-12">
-                        <div class="shopping-cart display-inline">
-                            <a href="#">选择语言：<b>中文<i class="fa fa-angle-down ml-15"></i></b></a>
-                            <ul class="">
-                                <li>
-                                    <div class="cart-content">
-                                        <h3><a href="#"> 中文</a></h3>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="cart-content">
-                                        <h3><a href="#">英文</a></h3>
-                                    </div>
-                                </li>
-                            </ul>
+                        <div class="shopping-cart display-inline" id="google_translate_element">
+                            <!--<a href="#">选择语言：<b>中文<i class="fa fa-angle-down ml-15"></i></b></a>-->
+                            <!--<ul class="">-->
+                            <!--<li>-->
+                            <!--<div class="cart-content">-->
+                            <!--<h3><a href="#"> 中文</a></h3>-->
+                            <!--</div>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                            <!--<div class="cart-content">-->
+                            <!--<h3><a href="#">英文</a></h3>-->
+                            <!--</div>-->
+                            <!--</li>-->
+                            <!--</ul>-->
                         </div>
                     </div>
                 </div>
@@ -194,8 +203,37 @@
 <script src="/javascripts/controller/main-controller.js"></script>
 <script>
     var router = '{{router}}';
-</script>
 
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+            {
+                pageLanguage: 'cn',
+                includedLanguages: 'en,zh-CN'
+            },
+            'google_translate_element'
+        );
+
+        /*
+            To remove the "powered by google",
+            uncomment one of the following code blocks.
+            NB: This breaks Google's Attribution Requirements:
+            https://developers.google.com/translate/v2/attribution#attribution-and-logos
+        */
+
+        // Native (but only works in browsers that support query selector)
+        //if(typeof(document.querySelector) == 'function') {
+        //    document.querySelector('.goog-logo-link').setAttribute('style', 'display: none');
+        //    document.querySelector('.goog-te-gadget').setAttribute('style', 'font-size: 0');
+        //}
+
+        // If you have jQuery - works cross-browser - uncomment this
+        //jQuery('.goog-logo-link').css('display', 'none');
+        //jQuery('.goog-te-gadget').css('font-size', '0');
+    }
+
+</script>
+<script
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 
 </html>
