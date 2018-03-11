@@ -33,48 +33,42 @@
                     <div class="main-menu menu-style-black display-inline hidden-sm header-3">
                         <nav>
                             <ul>
-                                <li><a href="index.html" class="active">首页</a></li>
-                                <li><a href="works.html">作品</a>
+                                <li><a href="index.html" class="active">首页</a>
+                                </li>
+                                <li><a ng-href="works.html?cid=130" href="works.html?cid=130">作品</a>
                                     <ul class="submenu">
-                                        <li><a href="works.html">绘画</a></li>
-                                        <li><a href="works-ceramics.html">陶瓷</a></li>
-                                        <li><a href="works-decoration.html">摆件</a></li>
-                                        <li><a href="works-sculpture.html">雕塑</a></li>
+                                        <!-- ngRepeat: item in categoryList[0].children --><li ng-repeat="item in categoryList[0].children" class="ng-scope"><a ng-href="works.html?cid=130" ng-bind="item.name" class="ng-binding" href="works.html?cid=130">绘画</a></li><!-- end ngRepeat: item in categoryList[0].children --><li ng-repeat="item in categoryList[0].children" class="ng-scope"><a ng-href="works.html?cid=131" ng-bind="item.name" class="ng-binding" href="works.html?cid=131">陶瓷</a></li><!-- end ngRepeat: item in categoryList[0].children --><li ng-repeat="item in categoryList[0].children" class="ng-scope"><a ng-href="works.html?cid=132" ng-bind="item.name" class="ng-binding" href="works.html?cid=132">摆件</a></li><!-- end ngRepeat: item in categoryList[0].children --><li ng-repeat="item in categoryList[0].children" class="ng-scope"><a ng-href="works.html?cid=133" ng-bind="item.name" class="ng-binding" href="works.html?cid=133">雕塑</a></li><!-- end ngRepeat: item in categoryList[0].children -->
                                     </ul>
                                 </li>
-                                <li><a href="director.html">导演</a>
+                                <li>
+                                    <a href="director.html">导演</a>
                                 </li>
-                                <li><a href="about.html">关于</a>
+                                <li>
+                                    <a href="about.html" >关于</a>
                                     <ul class="submenu">
                                         <li><a href="about.html">个人简介</a></li>
-                                        <li><a href="about-photo.html">相册</a></li>
+                                        <li><a href="photo.html">相册</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="research.html">学术</a>
+                                <li>
+                                    <a  href="research.html?cid=141">学术</a>
                                     <ul class="submenu">
-                                        <li><a href="research.html">艺术评论</a></li>
-                                        <li><a href="research-publish.html">出版著作</a></li>
+                                        <!-- ngRepeat: item in categoryList[2].children --><li ng-repeat="item in categoryList[2].children" class="ng-scope"><a ng-href="research.html?cid=141" ng-bind="item.name" class="ng-binding" href="research.html?cid=141">艺术评论</a></li><!-- end ngRepeat: item in categoryList[2].children --><li ng-repeat="item in categoryList[2].children" class="ng-scope"><a ng-href="research.html?cid=142" ng-bind="item.name" class="ng-binding" href="research.html?cid=142">出版著作</a></li><!-- end ngRepeat: item in categoryList[2].children -->
                                     </ul>
                                 </li>
-                                <li><a href="news.html">动态</a>
+                                <li>
+                                    <a href="news.html?cid=144">动态</a>
                                     <ul class="submenu">
-                                        <li><a href="news.html">新闻</a></li>
-                                        <li><a href="news-notice.html">公告</a></li>
-                                        <li><a href="news-report.html">媒体报道</a></li>
+                                        <!-- ngRepeat: item in categoryList[3].children --><li ng-repeat="item in categoryList[3].children" class="ng-scope"><a ng-href="news.html?cid=144" ng-bind="item.name" class="ng-binding" href="news.html?cid=144">新闻</a></li><!-- end ngRepeat: item in categoryList[3].children --><li ng-repeat="item in categoryList[3].children" class="ng-scope"><a ng-href="news.html?cid=145" ng-bind="item.name" class="ng-binding" href="news.html?cid=145">公告</a></li><!-- end ngRepeat: item in categoryList[3].children --><li ng-repeat="item in categoryList[3].children" class="ng-scope"><a ng-href="news.html?cid=146" ng-bind="item.name" class="ng-binding" href="news.html?cid=146">媒体报告</a></li><!-- end ngRepeat: item in categoryList[3].children -->
                                     </ul>
                                 </li>
-                                <li><a href="derivative.html">衍生品</a>
+                                <li>
+                                    <a ng-href="derivative.html?cid=150"  href="derivative.html?cid=150">衍生品</a>
                                     <ul class="submenu">
-                                        <li><a href="derivative.html">服装</a></li>
-                                        <li><a href="derivative-ornaments.html">配饰</a></li>
-                                        <li><a href="derivative-decoration.html">摆件</a></li>
-                                        <li><a href="derivative-carpet.html">地毯</a></li>
-                                        <li><a href="derivative-bag.html">箱包</a></li>
-                                        <li><a href="derivative-tapestry.html">挂毯</a></li>
-                                        <li><a href="derivative-furniture.html">家具</a></li>
+                                        <!-- ngRepeat: item in categoryList[4].children --><li ng-repeat="item in categoryList[4].children" class="ng-scope"><a ng-href="derivative.html?cid=148" ng-bind="item.name" class="ng-binding" href="derivative.html?cid=148">服装</a></li><!-- end ngRepeat: item in categoryList[4].children --><li ng-repeat="item in categoryList[4].children" class="ng-scope"><a ng-href="derivative.html?cid=149" ng-bind="item.name" class="ng-binding" href="derivative.html?cid=149">佩饰</a></li><!-- end ngRepeat: item in categoryList[4].children -->
                                     </ul>
                                 </li>
-                                <li><a href="contact.html">联系</a></li>
+                                <li><a href="contact.html" >联系</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -85,20 +79,20 @@
                     </div>
                 </div>
                 <div class="col-lg-5 col-md-4 col-sm-12 col-xs-12 text-right header-white-right">
-                    <div class="shopping-cart display-inline">
-                        <a href="#">选择语言：<b>中文<i class="fa fa-angle-down ml-15"></i></b></a>
-                        <ul class="">
-                            <li>
-                                <div class="cart-content">
-                                    <h3><a href="#"> 中文</a> </h3>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="cart-content">
-                                    <h3><a href="#">英文</a> </h3>
-                                </div>
-                            </li>
-                        </ul>
+                    <div class="shopping-cart display-inline" id="google_translate_element">
+                        <!--<a href="#">选择语言：<b>中文<i class="fa fa-angle-down ml-15"></i></b></a>-->
+                        <!--<ul class="">-->
+                            <!--<li>-->
+                                <!--<div class="cart-content">-->
+                                    <!--<h3><a href="#"> 中文</a> </h3>-->
+                                <!--</div>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<div class="cart-content">-->
+                                    <!--<h3><a href="#">英文</a> </h3>-->
+                                <!--</div>-->
+                            <!--</li>-->
+                        <!--</ul>-->
                     </div>
                 </div>
             </div>
@@ -472,5 +466,37 @@
 
     <script src="/js/verder.min.js"></script>
     <script src="/js/index.js"></script>
+    <script>
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                {
+                    pageLanguage: 'cn',
+                    includedLanguages: 'en,zh-CN'
+                },
+                'google_translate_element'
+            );
+
+            /*
+                To remove the "powered by google",
+                uncomment one of the following code blocks.
+                NB: This breaks Google's Attribution Requirements:
+                https://developers.google.com/translate/v2/attribution#attribution-and-logos
+            */
+
+            // Native (but only works in browsers that support query selector)
+            //if(typeof(document.querySelector) == 'function') {
+            //    document.querySelector('.goog-logo-link').setAttribute('style', 'display: none');
+            //    document.querySelector('.goog-te-gadget').setAttribute('style', 'font-size: 0');
+            //}
+
+            // If you have jQuery - works cross-browser - uncomment this
+            //jQuery('.goog-logo-link').css('display', 'none');
+            //jQuery('.goog-te-gadget').css('font-size', '0');
+        }
+
+    </script>
+    <script
+            src="/js/google-translate.js"></script>
 </body>
+
 </html>
