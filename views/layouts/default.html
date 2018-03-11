@@ -51,7 +51,7 @@
                                 <ul>
                                     <li><a href="index.html">首页</a>
                                     </li>
-                                    <li><a href="works.html?cid=1" ng-class="isActive('works')">作品</a>
+                                    <li><a ng-href="{% raw %}{{'works.html?cid='+categoryList[0].children[0].id}}{% endraw %}" ng-class="isActive('works')">作品</a>
                                         <ul class="submenu">
                                             <li ng-repeat="item in categoryList[0].children"><a
                                                     ng-href="{% raw %}{{'works.html?cid='+item.id}}{% endraw %}"

@@ -2,245 +2,64 @@
 
 {% block content %}
 <!-- Start page banner -->
-<div class="breadcrumb-area2 ptb-50 breadcrumb-bg1">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12 text-center">
-                <h2 class="breadcrumb-title text-white uppercase ">绘画艺术</h2>
-                <div class="breadcrumb-wrap mt-20">
-                    <ul class="breadcrumb-list text-center mt-20">
-                        <li><a href="index.html">首页 </a></li>
-                        <li><a href="#">作品</a></li>
-                        <li><a href="#">绘画艺术</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="shop-area" ng-controller="worksController">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 col-sm-8">
-                <div class="shop-page-bar">
-                    <div class="mt-30">
-                        <div class="tab-content">
-                            <div role="tabpanel" class="tab-pane active" id="home">
-                                <div class="row">
-                                    <div class="col-md-4 col-sm-6" ng-repeat="item in list.data">
-                                        <div class="product-wrapper mb-40">
-                                            <div class="product-img">
-                                                <a href="#"><img ng-src="{% raw %}{{item.imgurl[0]}}{% endraw %}" alt="" /></a>
-                                                <div class="product-action" ng-click="getDocumentById(item.id)">
-                                                    <a href="#" data-toggle="modal" data-target="#productModal"><i class="pe-7s-look"></i></a>
-                                                </div>
-                                            </div>
-                                            <div class="product-content">
-                                                <div class="pro-title">
-                                                    <h3><a href="product-details.html" ng-bind="item.catename">抽象画</a></h3>
-                                                </div>
-                                                <div class="price-reviews">
-                                                    <div class="price-box">
-                                                        <span class="price product-price" ng-bind="item.title"></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--<div class="col-md-4 col-sm-6">-->
-                                        <!--<div class="product-wrapper mb-40">-->
-                                            <!--<div class="product-img">-->
-                                                <!--<a href="#"><img src="img/work/02.jpg" alt="" /></a>-->
-                                                <!--<div class="product-action">-->
-                                                    <!--<a href="#" data-toggle="modal" data-target="#productModal"><i class="pe-7s-look"></i></a>-->
-                                                <!--</div>-->
-                                            <!--</div>-->
-                                            <!--<div class="product-content">-->
-                                                <!--<div class="pro-title">-->
-                                                    <!--<h3><a href="product-details.html">抽象画</a></h3>-->
-                                                <!--</div>-->
-                                                <!--<div class="price-reviews">-->
-                                                    <!--<div class="price-box">-->
-                                                        <!--<span class="price product-price">标题写在这</span>-->
-                                                    <!--</div>-->
-                                                <!--</div>-->
-                                            <!--</div>-->
-                                        <!--</div>-->
-                                    <!--</div>-->
-                                    <!--<div class="col-md-4 col-sm-6">-->
-                                        <!--<div class="product-wrapper mb-40">-->
-                                            <!--<div class="product-img">-->
-                                                <!--<a href="#"><img src="img/work/03.jpg" alt="" /></a>-->
-                                                <!--<div class="product-action">-->
-                                                    <!--<a href="#" data-toggle="modal" data-target="#productModal"><i class="pe-7s-look"></i></a>-->
-                                                <!--</div>-->
-                                            <!--</div>-->
-                                            <!--<div class="product-content">-->
-                                                <!--<div class="pro-title">-->
-                                                    <!--<h3><a href="product-details.html">抽象画</a></h3>-->
-                                                <!--</div>-->
-                                                <!--<div class="price-reviews">-->
-                                                    <!--<div class="price-box">-->
-                                                        <!--<span class="price product-price">标题写在这</span>-->
-                                                    <!--</div>-->
-                                                <!--</div>-->
-                                            <!--</div>-->
-                                        <!--</div>-->
-                                    <!--</div>-->
-                                    <!--<div class="col-md-4 col-sm-6">-->
-                                        <!--<div class="product-wrapper mb-40">-->
-                                            <!--<div class="product-img">-->
-                                                <!--<a href="#"><img src="img/work/04.jpg" alt="" /></a>-->
-                                                <!--<div class="product-action">-->
-                                                    <!--<a href="#" data-toggle="modal" data-target="#productModal"><i class="pe-7s-look"></i></a>-->
-                                                <!--</div>-->
-                                            <!--</div>-->
-                                            <!--<div class="product-content">-->
-                                                <!--<div class="pro-title">-->
-                                                    <!--<h3><a href="product-details.html">抽象画</a></h3>-->
-                                                <!--</div>-->
-                                                <!--<div class="price-reviews">-->
-                                                    <!--<div class="price-box">-->
-                                                        <!--<span class="price product-price">标题写在这</span>-->
-                                                    <!--</div>-->
-                                                <!--</div>-->
-                                            <!--</div>-->
-                                        <!--</div>-->
-                                    <!--</div>-->
-                                    <!--<div class="col-md-4 col-sm-6">-->
-                                        <!--<div class="product-wrapper mb-40">-->
-                                            <!--<div class="product-img">-->
-                                                <!--<a href="#"><img src="img/work/05.jpg" alt="" /></a>-->
-                                                <!--<div class="product-action">-->
-                                                    <!--<a href="#" data-toggle="modal" data-target="#productModal"><i class="pe-7s-look"></i></a>-->
-                                                <!--</div>-->
-                                            <!--</div>-->
-                                            <!--<div class="product-content">-->
-                                                <!--<div class="pro-title">-->
-                                                    <!--<h3><a href="product-details.html">抽象画</a></h3>-->
-                                                <!--</div>-->
-                                                <!--<div class="price-reviews">-->
-                                                    <!--<div class="price-box">-->
-                                                        <!--<span class="price product-price">标题写在这</span>-->
-                                                    <!--</div>-->
-                                                <!--</div>-->
-                                            <!--</div>-->
-                                        <!--</div>-->
-                                    <!--</div>-->
-                                    <!--<div class="col-md-4 col-sm-6">-->
-                                        <!--<div class="product-wrapper mb-40">-->
-                                            <!--<div class="product-img">-->
-                                                <!--<a href="#"><img src="img/work/06.jpg" alt="" /></a>-->
-                                                <!--<div class="product-action">-->
-                                                    <!--<a href="#" data-toggle="modal" data-target="#productModal"><i class="pe-7s-look"></i></a>-->
-                                                <!--</div>-->
-                                            <!--</div>-->
-                                            <!--<div class="product-content">-->
-                                                <!--<div class="pro-title">-->
-                                                    <!--<h3><a href="product-details.html">抽象画</a></h3>-->
-                                                <!--</div>-->
-                                                <!--<div class="price-reviews">-->
-                                                    <!--<div class="price-box">-->
-                                                        <!--<span class="price product-price">标题写在这</span>-->
-                                                    <!--</div>-->
-                                                <!--</div>-->
-                                            <!--</div>-->
-                                        <!--</div>-->
-                                    <!--</div>-->
-                                    <!--<div class="col-md-4 col-sm-6">-->
-                                        <!--<div class="product-wrapper mb-40">-->
-                                            <!--<div class="product-img">-->
-                                                <!--<a href="#"><img src="img/work/07.jpg" alt="" /></a>-->
-                                                <!--<div class="product-action">-->
-                                                    <!--<a href="#" data-toggle="modal" data-target="#productModal"><i class="pe-7s-look"></i></a>-->
-                                                <!--</div>-->
-                                            <!--</div>-->
-                                            <!--<div class="product-content">-->
-                                                <!--<div class="pro-title">-->
-                                                    <!--<h3><a href="product-details.html">抽象画</a></h3>-->
-                                                <!--</div>-->
-                                                <!--<div class="price-reviews">-->
-                                                    <!--<div class="price-box">-->
-                                                        <!--<span class="price product-price">标题写在这</span>-->
-                                                    <!--</div>-->
-                                                <!--</div>-->
-                                            <!--</div>-->
-                                        <!--</div>-->
-                                    <!--</div>-->
-                                    <!--<div class="col-md-4 col-sm-6">-->
-                                        <!--<div class="product-wrapper mb-40">-->
-                                            <!--<div class="product-img">-->
-                                                <!--<a href="#"><img src="img/work/08.jpg" alt="" /></a>-->
-                                                <!--<div class="product-action">-->
-                                                    <!--<a href="#" data-toggle="modal" data-target="#productModal"><i class="pe-7s-look"></i></a>-->
-                                                <!--</div>-->
-                                            <!--</div>-->
-                                            <!--<div class="product-content">-->
-                                                <!--<div class="pro-title">-->
-                                                    <!--<h3><a href="product-details.html">抽象画</a></h3>-->
-                                                <!--</div>-->
-                                                <!--<div class="price-reviews">-->
-                                                    <!--<div class="price-box">-->
-                                                        <!--<span class="price product-price">标题写在这</span>-->
-                                                    <!--</div>-->
-                                                <!--</div>-->
-                                            <!--</div>-->
-                                        <!--</div>-->
-                                    <!--</div>-->
-                                    <!--<div class="col-md-4 col-sm-6">-->
-                                        <!--<div class="product-wrapper mb-40">-->
-                                            <!--<div class="product-img">-->
-                                                <!--<a href="#"><img src="img/work/09.jpg" alt="" /></a>-->
-                                                <!--<div class="product-action">-->
-                                                    <!--<a href="#" data-toggle="modal" data-target="#productModal"><i class="pe-7s-look"></i></a>-->
-                                                <!--</div>-->
-                                            <!--</div>-->
-                                            <!--<div class="product-content">-->
-                                                <!--<div class="pro-title">-->
-                                                    <!--<h3><a href="product-details.html">抽象画</a></h3>-->
-                                                <!--</div>-->
-                                                <!--<div class="price-reviews">-->
-                                                    <!--<div class="price-box">-->
-                                                        <!--<span class="price product-price">标题写在这</span>-->
-                                                    <!--</div>-->
-                                                <!--</div>-->
-                                            <!--</div>-->
-                                        <!--</div>-->
-                                    <!--</div>-->
-                                    <!--<div class="col-md-4 col-sm-6">-->
-                                        <!--<div class="product-wrapper mb-40">-->
-                                            <!--<div class="product-img">-->
-                                                <!--<a href="#"><img src="img/work/10.jpg" alt="" /></a>-->
-                                                <!--<div class="product-action">-->
-                                                    <!--<a href="#" data-toggle="modal" data-target="#productModal"><i class="pe-7s-look"></i></a>-->
-                                                <!--</div>-->
-                                            <!--</div>-->
-                                            <!--<div class="product-content">-->
-                                                <!--<div class="pro-title">-->
-                                                    <!--<h3><a href="product-details.html">抽象画</a></h3>-->
-                                                <!--</div>-->
-                                                <!--<div class="price-reviews">-->
-                                                    <!--<div class="price-box">-->
-                                                        <!--<span class="price product-price">标题写在这</span>-->
-                                                    <!--</div>-->
-                                                <!--</div>-->
-                                            <!--</div>-->
-                                        <!--</div>-->
-                                    <!--</div>-->
-
-                                </div>
-                            </div>
-                            <div class="content-sortpagibar text-center">
-                                <my-pagination page-option="option"></my-pagination>
-                            </div>
-                        </div>
+    <div class="breadcrumb-area2 ptb-50 breadcrumb-bg1">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <h2 class="breadcrumb-title text-white uppercase ">绘画艺术</h2>
+                    <div class="breadcrumb-wrap mt-20">
+                        <ul class="breadcrumb-list text-center mt-20">
+                            <li><a href="index.html">首页 </a></li>
+                            <li><a ng-href="{% raw %}{{'works.html?cid='+categoryList[0].children[0].id}}{% endraw %}">作品</a></li>
+                            <li><a href="javascript:location.reload();" ng-bind="category.title"></a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
+    <div class="shop-area" ng-controller="worksController">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-8">
+                    <div class="shop-page-bar">
+                        <div class="mt-30">
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active" id="home">
+                                    <div class="row">
+                                        <div class="col-md-4 col-sm-6" ng-repeat="item in list.data">
+                                            <div class="product-wrapper mb-40">
+                                                <div class="product-img">
+                                                    <a href="#"><img ng-src="{% raw %}{{item.imgurl[0]}}{% endraw %}" alt="" /></a>
+                                                    <div class="product-action" ng-click="getDocumentById(item.id)">
+                                                        <a href="#" data-toggle="modal" data-target="#productModal"><i class="pe-7s-look"></i></a>
+                                                    </div>
+                                                </div>
+                                                <div class="product-content">
+                                                    <div class="pro-title">
+                                                        <h3><a href="product-details.html" ng-bind="item.catename">抽象画</a></h3>
+                                                    </div>
+                                                    <div class="price-reviews">
+                                                        <div class="price-box">
+                                                            <span class="price product-price" ng-bind="item.title"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content-sortpagibar text-center">
+                                    <my-pagination page-option="option"></my-pagination>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-</div>
+
+    </div>
 {% endblock %}
