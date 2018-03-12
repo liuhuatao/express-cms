@@ -25,7 +25,7 @@
 /*----------------------------------------*/
 
 .bg-1 {
-    background: rgba(0, 0, 0, 0) url("img/bg/img_newletter.jpg") no-repeat scroll center top;
+    background: rgba(0, 0, 0, 0) url("img/bg/img_newletter.jpg") no-repeat scroll center top;;
 }
 .bg-2 {
     background: rgba(0, 0, 0, 0) url("img/bg/img_newletter.jpg") repeat scroll center center / cover;
@@ -37,7 +37,7 @@
     background-color: #444;
     border: 0 none;
     border-radius: 2px;
-    color: #fff;
+    color: #ffffff;
     font-size: 16px;
     height: 50px;
     line-height: 26px;
