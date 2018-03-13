@@ -52,4 +52,8 @@ router.get('/research.html', function (req, res, next) {
   res.locals.router = 'research';
   res.render('research.html', {title: 'Express'});
 });
+router.get('/course.html', function (req, res, next) {
+  res.locals.router = 'research';
+  res.render('course.html', {title: 'Express'});
+});
 module.exports = router;
