@@ -5,7 +5,7 @@ NOTE: This is Header style file. All Header related style included in this file.
 
 --------------------------------------*/
 .header-pos {
-  background: transparent none repeat scroll 0 0;
+  background: #fff;
   left: 0;
   padding: 25px 15px 0;
   position: absolute;
@@ -166,7 +166,7 @@ NOTE: This is Header style file. All Header related style included in this file.
   color: #2c2c2c;
   content: "";
   font-family: FontAwesome;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 form#searchbox {
@@ -243,7 +243,7 @@ form#searchbox input {
   cursor: pointer;
   display: block;
   font-family: FontAwesome;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 30px;
   vertical-align: middle;
@@ -277,7 +277,7 @@ div.current {
 
 .content-nav li {
   color: #797979;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 40px;
 }
 
@@ -330,7 +330,7 @@ div.current {
 .cart-content h3 a {
   color: #f5f5f5;
   display: inline-block;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 18px;
 }
 
@@ -427,7 +427,7 @@ span.phone {
   display: block;
   float: left;
   font-family: FontAwesome;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 30px;
   margin-right: 10px;
   vertical-align: middle;
@@ -435,7 +435,7 @@ span.phone {
 
 span.des {
   color: #ffae00;
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .header-2 .icon-search {
@@ -450,7 +450,7 @@ span.des {
 /* header-black */
 .header-black {
   background: #232222 none repeat scroll 0 0;
-  padding: 0 120px;
+  padding: 0 15px;
 }
 
 .main-menu.menu-style-black {
@@ -551,4 +551,33 @@ header.header-4 {
 
 .headroom--unpinned {
   transform: translateY(-100%);
+}
+
+.elements1.space-custom {
+  height: 0px;
+}
+.elements1.header-pos {
+  position: inherit;
+}
+.elements1 .main-menu {
+  display: table;
+  margin: 0 auto;
+}
+.elements1 .search-block-top {
+  margin-top: 0;
+}
+.elements1 .setting-menu {
+  margin: 0px 0 0 30px;
+}
+.elements1.header-pos {
+  padding: 0 15px;
+}
+.elements1 .logo {
+  padding-top: 16px;
+}
+.elements1 .shopping-cart {
+  padding-bottom: 25px;
+}
+.elements1 .main-menu ul li a {
+  padding: 25px 18px;
 }

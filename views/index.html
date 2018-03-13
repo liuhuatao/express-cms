@@ -26,22 +26,27 @@
 </head>
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
     <!-- header start -->
-    <header class="intelligent-header header-black header-area">
-        <div class="header-black-area">
+    <header class="intelligent-header header-black header-area elements1">
+        <div class="header-black-area header-middle">
             <div class="row">
-                <div class="col-lg-5 col-md-6 hidden-xs">
+                <div class="col-md-2 col-sm-3 col-xs-12">
+                    <div class="logo logo-white">
+                        <a href="index.html"><img src="img/logo/logo.png" alt="" /></a>
+                    </div>
+                </div>
+                <div class="col-md-8 col-sm-6 col-xs-12 text-right xs-center">
                     <div class="main-menu menu-style-black display-inline hidden-sm header-3">
                         <nav>
                             <ul>
                                 <li><a href="index.html" class="active">首页</a>
                                 </li>
-                                <li><a ng-href="works.html?cid=130" href="works.html?cid=130">作品</a>
+                                <li><a ng-href="works.html?cid=130" href="works.html?cid=130">艺术作品</a>
                                     <ul class="submenu">
                                         <!-- ngRepeat: item in categoryList[0].children --><li ng-repeat="item in categoryList[0].children" class="ng-scope"><a ng-href="works.html?cid=130" ng-bind="item.name" class="ng-binding" href="works.html?cid=130">绘画</a></li><!-- end ngRepeat: item in categoryList[0].children --><li ng-repeat="item in categoryList[0].children" class="ng-scope"><a ng-href="works.html?cid=131" ng-bind="item.name" class="ng-binding" href="works.html?cid=131">陶瓷</a></li><!-- end ngRepeat: item in categoryList[0].children --><li ng-repeat="item in categoryList[0].children" class="ng-scope"><a ng-href="works.html?cid=132" ng-bind="item.name" class="ng-binding" href="works.html?cid=132">摆件</a></li><!-- end ngRepeat: item in categoryList[0].children --><li ng-repeat="item in categoryList[0].children" class="ng-scope"><a ng-href="works.html?cid=133" ng-bind="item.name" class="ng-binding" href="works.html?cid=133">雕塑</a></li><!-- end ngRepeat: item in categoryList[0].children -->
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="director.html">导演</a>
+                                    <a href="director.html">导演艺术</a>
                                 </li>
                                 <li>
                                     <a href="about.html" >关于</a>
@@ -73,13 +78,8 @@
                         </nav>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
-                    <div class="logo logo-white">
-                        <a href="index.html"><img src="/img/logo/logo.png" alt="" /></a>
-                    </div>
-                </div>
-                <div class="col-lg-5 col-md-4 col-sm-12 col-xs-12 text-right header-white-right">
-                    <div class="shopping-cart display-inline" id="google_translate_element">
+                <div class="col-md-2 col-sm-3 col-xs-12 ">
+                    <div class="display-inline  pull-right" id="google_translate_element" style="height: 53px;overflow: hidden;margin-top: 10px;">
                         <!--<a href="#">选择语言：<b>中文<i class="fa fa-angle-down ml-15"></i></b></a>-->
                         <!--<ul class="">-->
                             <!--<li>-->
@@ -113,8 +113,7 @@
                         <div class="index_inner">
                             <div class="index_box solgan">
                                 <div class="container">
-
-                                    <h2>欢迎走进陈俊毅艺术世界！</h2>
+                                    <h2>欢迎走进 <span>陈俊毅艺术世界！</span></h2>
                                 </div>
                             </div>
                         </div>
@@ -139,50 +138,47 @@
                         <div class="container">
                             <div class="about_box item_bd">
                                 <div class="card">
-                                <a href="director.html">
-                                    <div class="cont">
-                                        <div class="card_image" style="background-image: url(img/index/about_1.png);"></div>
-                                        <div class="card_detail">
+                                    <a href="director.html">
+                                        <div class="cont">
+                                            <div class="card_image" style="background-image: url(img/index/about_1.png);"></div>
+                                            <div class="card_detail">
                                                 <span class="text">
                                                     <h3>艺术作品</h3>
-                                                    <p class="line">抽象艺术 / 油画创作 / 艺术展览</p>
-                                                    <p class="text-r"><span class="more">了解更多 &gt;</span></p>
-                                                </span>   
-                                        </div>
-                                    </div>
-                                </a>
-                                </div>
-                                <div class="card">
-                                <a href="director.html">
-                                    <div class="cont">
-                                        <div class="card_image" style="background-image: url(img/index/about_2.png);"></div>
-                                        <div class="card_detail">
-                                                <span class="text">
-                                                    <h3>导演艺术</h3>
-                                                    <p class="line">导演艺术 / 舞台灯光设计 / 舞台策划</p>
                                                     <p class="text-r"><span class="more">了解更多 &gt;</span></p>
                                                 </span>
+                                            </div>
                                         </div>
-                                    </div>
-                                </a>
+                                    </a>
                                 </div>
                                 <div class="card">
-                                <a href="derivative.html">
-                                    <div class="cont">
-                                        <div class="card_image" style="background-image: url(img/index/about_3.png);"></div>
-                                        <div class="card_detail">
+                                    <a href="director.html">
+                                        <div class="cont">
+                                            <div class="card_image" style="background-image: url(img/index/about_2.png);"></div>
+                                            <div class="card_detail">
+                                                <span class="text">
+                                                    <h3>导演艺术</h3>
+                                                    <p class="text-r"><span class="more">了解更多 &gt;</span></p>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="card">
+                                    <a href="derivative.html">
+                                        <div class="cont">
+                                            <div class="card_image" style="background-image: url(img/index/about_3.png);"></div>
+                                            <div class="card_detail">
 											<span class="text">
 												<h3>文创产品</h3>
-												<p class="line">艺术衍生品 / 时装 / 丝巾 / 彩瓷..</p>
 												<p class="text-r"><span class="more">了解更多 &gt;</span></p>
 											</span>
+                                            </div>
                                         </div>
-                                    </div>
-                                </a>
+                                    </a>
                                 </div>
                             </div>
                         </div>
-						
+
                     </div>
                 </div>
                 <div class="arrow"><span></span><i class="fa fa-chevron-down"></i></div>
@@ -281,7 +277,7 @@
                 <div class="index_inner">
                     <div class="index_box item_box">
                         <h2><a href="kehuminglu.html">简介</a></h2>
-                        <div class="testimonial-area bg-3 ptb-100">
+                        <div class="testimonial-area bg-3 ptb-40">
                             <div class="container">
                                 <div class="testimonial-active">
                                     <div class="single-testimonial text-center">
@@ -305,7 +301,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="arrow"><span></span><i class="iconfont icon-arrow"></i></div>
+                <h5><a class="button medium button-black mb-20" href="news.html"><span>查看更多</span></a></h5>
 
             </div>
 			<!-- 第6屏 衍生品 -->

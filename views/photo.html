@@ -31,16 +31,16 @@
                 <div class="col-md-12">
                     <div class="product-tab">
                         <!-- Nav tabs -->
-                        <ul class="custom-tab text-center mb-40">
+                        <!--<ul class="custom-tab text-center mb-40">
                             <li class="active" ng-repeat="item in categoryList[1].children">
                                 <a href="javasript:;" data-toggle="tab"  ng-click="getDocumentByCId(item.id)" ng-bind="item.name">生活</a></li>
-                        </ul>
+                        </ul>-->
                         <!-- Tab panes -->
                         <div class="row">
                             <div class="tab-content">
-                                <div class="tab-pane active" id="home">
+                                <div class="tab-pane active">
                                     <div class="product-carousel">
-                                        <div class="col-md-12"  ng-repeat="item in list.data">
+                                        <div class="col-md-3"  ng-repeat="item in list.data">
                                             <div class="product-wrapper mb-40"  ng-click="getDocumentById(item.id)">
                                                 <div class="product-img">
                                                     <a href="#"><img src="{% raw %}{{item.imgurl[0]}}{% endraw %}" alt=""/></a>
