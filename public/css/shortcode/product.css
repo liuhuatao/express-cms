@@ -116,6 +116,8 @@ text-decoration: line-through;
 }
 .price-box {
   float: left;
+  height: 26px;
+  border-bottom: 2px solid #000;
 }
 .old-price{}
 .pro-rating {
