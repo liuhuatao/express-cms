@@ -11,7 +11,7 @@
                     <div class="breadcrumb-wrap mt-20">
                         <ul class="breadcrumb-list text-center mt-20">
                             <li><a href="index.html">首页 </a></li>
-                            <li><a  href="javascript:location.reload();" ng-bind="category.title"></a></li>
+                            <li><a href="javascript:location.reload();" ng-bind="category.title"></a></li>
                         </ul>
                     </div>
                 </div>
@@ -23,22 +23,21 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-9 col-sm-8">
-                    <div class="row mb-50" ng-repeat="item in list">
+                    <div class="row mb-50" ng-repeat="item in list.data">
                         <div class="col-xs-5 col-sm-5 col-md-4">
                             <div class="product-wrapper">
                                 <div class="product-img">
-                                    <a href="#"><img src="img/work/14.jpg" alt=""/></a>
+                                    <a ng-href="{% raw %}{{'/article.html?id='+item.id}}{% endraw %}"><img ng-src="{% raw %}{{item.imgurl[0]}}{% endraw %}" alt=""/></a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-xs-7 col-sm-7 col-md-8">
                             <div class="product-content product-list">
                                 <div class="pro-title">
-                                    <h3><a href="product-details.html" ng-bind="item.title">《盛开的素馨花》---陈俊毅油画赏析</a></h3>
+                                    <h3><a ng-href="{% raw %}{{'/article.html?id='+item.id}}{% endraw %}" ng-bind="item.title"></a></h3>
                                 </div>
-                                <p>花是陈俊毅油画作品中屡见不鲜的创作题材，每一次创作都会以不同的首发和不同的面貌呈现于画坛、呈现于观众。
-                                    素馨花以其洁白无瑕的形象，成为天使和纯洁少女的象征；但其略显单调的色泽却使画家在描绘时颇费斟酌...</p>
-                                <a class="button medium mb-20" href="#"><span>阅读全文 </span> </a>
+                                <p ng-bind="item.description"></p>
+                                <a class="button medium mb-20" ng-href="{% raw %}{{'/article.html?id='+item.id}}{% endraw %}"><span>阅读全文 </span> </a>
                             </div>
                         </div>
                     </div>
@@ -49,14 +48,14 @@
                         <h2 class="title-block">精彩评论</h2>
                         <div class="sidebar-widget">
                             <ul class="sidebar-menu">
-                                <li><a href="#">探访陈俊毅的“艺术... <span>(李超)</span></a></li>
-                                <li><a href="#">陈俊毅的油画充满也...<span>(淳子)</span></a></li>
-                                <li><a href="#">陈俊毅的油画《未完...<span>(淳子)</span></a></li>
-                                <li><a href="#">陈俊毅油画《朱鹮之...<span>(邵永平)</span></a></li>
+                                <li ng-repeat="item in list.data"><a ng-href="{% raw %}{{'/article.html?id='+item.id}}{% endraw %}">{% raw %}{{item.title}}{% endraw %}<span></span></a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="content-sortpagibar text-center">
+                <my-pagination page-option="option"></my-pagination>
             </div>
         </div>
     </div>

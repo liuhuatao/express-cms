@@ -314,7 +314,7 @@ mainApp.controller('researchController', function ($scope, $http, mainService, $
   init();
 
   function init() {
-    getDocumentByCId(cid, 1, 10);
+    getDocumentByCId(cid, 1, 4);
   }
 
   function getDocumentByCId(cid, pageIndex, pageSize) {
@@ -328,7 +328,7 @@ mainApp.controller('researchController', function ($scope, $http, mainService, $
 
         //点击页数的回调函数，参数page为点击的页数
         click: function (page) {
-          getDocumentByCId(cid, page, 10);
+          getDocumentByCId(cid, page, 4);
           //这里可以写跳转到某个页面等...
         }
       }
