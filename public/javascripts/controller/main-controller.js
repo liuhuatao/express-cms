@@ -83,6 +83,7 @@ mainApp.directive('myPagination', function () {
 mainApp.controller('bodyController', function ($rootScope, $scope, mainService) {
   var cid = mainService.getQueryStringByName('cid');
   $rootScope.isActive = isActive;
+  $rootScope.goUrl = goUrl;
 
 
   function isActive(item) {
@@ -107,6 +108,10 @@ mainApp.controller('bodyController', function ($rootScope, $scope, mainService) 
     }, function (err) {
       console.log(JSON.stringify(err));
     })
+  }
+
+  function goUrl(url) {
+    window.open(url);
   }
 
   getCategoryById(cid);
