@@ -2,29 +2,22 @@
 
 {% block content %}
 <!-- Start page banner -->
-    <div class="breadcrumb-area2 ptb-50 breadcrumb-bg1">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 text-center">
-                    <h2 class="breadcrumb-title text-white uppercase ">绘画艺术</h2>
-                    <div class="breadcrumb-wrap mt-20">
-                        <ul class="breadcrumb-list text-center mt-20">
-                            <li><a href="index.html">首页 </a></li>
-                            <li><a ng-href="{% raw %}{{'works.html?cid='+categoryList[0].children[0].id}}{% endraw %}">艺术作品</a></li>
-                            <li><a href="javascript:location.reload();" ng-bind="category.title"></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <div class="shop-area" ng-controller="worksController">
         <div class="container">
-            <div class="row">
+            <div class="row mt-150">
+                <div class="section-title text-center mb-20">
+                    <h2>- 艺术作品 -</h2>
+                </div>
+                <ul class="custom-tab text-center mb-20">
+                    <li class="active"><a href="works.html?cid=130" data-toggle="tab">绘画</a></li>
+                    <li><a href="works.html?cid=131" data-toggle="tab"> 陶瓷</a></li>
+                    <li><a href="works.html?cid=132" data-toggle="tab"> 摆件</a></li>
+                    <li><a href="works.html?cid=133" data-toggle="tab"> 雕塑</a></li>
+                </ul>
                 <div class="col-md-12 col-sm-8">
                     <div class="shop-page-bar">
-                        <div class="mt-60">
+                        <div class="">
                             <div class="tab-content">
                                 <div role="tabpanel" class="tab-pane active" id="home">
                                     <div class="row">
@@ -44,7 +37,10 @@
                                                         <div class="price-box">
                                                             <span class="price product-price" ng-bind="item.title"></span>
                                                         </div>
+                                                        <a class="s-btn"><i class="fa fa-commenting-o mr-10"></i>艺术评论</a>
                                                     </div>
+
+
                                                 </div>
                                             </div>
                                         </div>
