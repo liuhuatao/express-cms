@@ -121,17 +121,17 @@ text-decoration: line-through;
 }
 .old-price{}
 .pro-rating {
-  float: right;
+  margin-top: 10px;
 }
 .pro-rating a {
   color: #777676;
   display: inline-block;
 }
 .pro-title{}
-.pro-title h3 a {
-  color: #333;
-  font-size: 14px;
-  font-weight: 400;
+.pro-title h2 a {
+  color: #000;
+  font-size: 30px;
+  font-weight: 700;
   padding: 5px 0;
   text-decoration: none;
   text-transform: capitalize;

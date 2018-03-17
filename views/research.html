@@ -3,17 +3,17 @@
 {% block content %}
 <div ng-controller="researchController">
     <!-- Start page content -->
-    <div class="breadcrumb-area2 ptb-50">
+    <div class="breadcrumb-area2 ptb-150 bg-1">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 text-center">
-                    <h2 class="breadcrumb-title text-white uppercase">艺术评论</h2>
                     <div class="breadcrumb-wrap mt-20">
-                        <ul class="breadcrumb-list text-center mt-20">
+                        <ul class="breadcrumb-list text-center">
                             <li><a href="index.html">首页 </a></li>
                             <li><a href="javascript:location.reload();" ng-bind="category.title"></a></li>
                         </ul>
                     </div>
+                    <h2 class="breadcrumb-title text-white uppercase  mt-20">艺术评论</h2>
                 </div>
             </div>
         </div>
@@ -22,9 +22,9 @@
     <div class="banner-area pt-70 pb-70">
         <div class="container">
             <div class="row">
-                <div class="col-md-9 col-sm-8">
-                    <div class="row mb-50" ng-repeat="item in list.data">
-                        <div class="col-xs-5 col-sm-5 col-md-4">
+                <div class="col-md-12 col-sm-12">
+                    <div class="row mb-50  research-list" ng-repeat="item in list.data">
+                        <div class="col-xs-4 col-sm-4 col-md-4">
                             <div class="product-wrapper">
                                 <div class="product-img">
                                     <a ng-href="{% raw %}{{'/article.html?id='+item.id}}{% endraw %}"><img ng-src="{% raw %}{{item.imgurl[0]}}{% endraw %}" alt=""/></a>
@@ -34,22 +34,14 @@
                         <div class="col-xs-7 col-sm-7 col-md-8">
                             <div class="product-content product-list">
                                 <div class="pro-title">
-                                    <h3><a ng-href="{% raw %}{{'/article.html?id='+item.id}}{% endraw %}" ng-bind="item.title"></a></h3>
+                                    <h2><a ng-href="{% raw %}{{'/article.html?id='+item.id}}{% endraw %}" ng-bind="item.title"></a></h2>
                                 </div>
+                                <!--<div class="pro-rating">
+                                    作者：<span>淳子</span>
+                                </div>-->
                                 <p ng-bind="item.description"></p>
-                                <a class="button medium mb-20" ng-href="{% raw %}{{'/article.html?id='+item.id}}{% endraw %}"><span>阅读全文 </span> </a>
+                                <a class=" m-btn" ng-href="{% raw %}{{'/article.html?id='+item.id}}{% endraw %}"><span>阅读全文 </span> </a>
                             </div>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col-md-3 col-sm-3 col-xs-12 mb-40 f-right">
-                    <div class="column">
-                        <h2 class="title-block">精彩评论</h2>
-                        <div class="sidebar-widget">
-                            <ul class="sidebar-menu">
-                                <li ng-repeat="item in list.data"><a ng-href="{% raw %}{{'/article.html?id='+item.id}}{% endraw %}">{% raw %}{{item.title}}{% endraw %}<span></span></a></li>
-                            </ul>
                         </div>
                     </div>
                 </div>

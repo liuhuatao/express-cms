@@ -2,26 +2,24 @@
 
 {% block content %}
 <div ng-controller="photoController">
-    <!-- Start page content -->
-    <div class="breadcrumb-area2 ptb-50">
+    <div class="breadcrumb-area2 ptb-150 bg-2">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 text-center">
-                    <h2 class="breadcrumb-title text-white uppercase">相册</h2>
-                    <div class="breadcrumb-wrap ">
-                        <ul class="breadcrumb-list text-center mt-20 mt-30">
+                    <div class="breadcrumb-wrap mt-20">
+                        <ul class="breadcrumb-list text-center">
                             <li><a href="index.html">首页 </a></li>
-                            <li><a href="about.html">关于</a></li>
-                            <li><a href="javascript:location.reload()">相册</a></li>
+                            <li><a href="javascript:location.reload();" ng-bind="category.title"></a></li>
                         </ul>
                     </div>
+                    <h2 class="breadcrumb-title text-white uppercase  mt-20">相册</h2>
                 </div>
             </div>
         </div>
     </div>
     <!-- 相册 start -->
-    <div class="new-arrival-area ptb-100">
-        <div class="container">
+    <div class="new-arrival-area">
+        <div class="container pt-50">
             <div class="row">
                 <div class="section-title text-center mb-20">
                     <h2>陈俊毅的相册</h2>

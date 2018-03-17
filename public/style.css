@@ -24,15 +24,6 @@
 /*  1. Promo style
 /*----------------------------------------*/
 
-.bg-1 {
-    background: rgba(0, 0, 0, 0) url("img/bg/img_newletter.jpg") no-repeat scroll center top;
-}
-.bg-2 {
-    background: rgba(0, 0, 0, 0) url("img/bg/img_newletter.jpg") repeat scroll center center / cover;
-}
-.bg-3 {
-    background: rgba(0, 0, 0, 0) url("img/bg/testimonials.jpg") repeat scroll center center / cover;
-}
 .btn {
     background-color: #444;
     border: 0 none;
@@ -1338,7 +1329,7 @@ label.inline > a {
 }
 
 .s-btn {;
-    display: block;
+    display: inline-block;
     float: right;
     padding: 6px 10px;
     border: 1px solid #333;
@@ -1346,7 +1337,16 @@ label.inline > a {
     color: #333;
     cursor: pointer;
 }
-.s-btn:hover {
+.m-btn {
+    display: inline-block;
+    padding: 15px 40px;
+    border: 1px solid #333;
+    border-radius: 20px 0 20px 0;
+    color: #333;
+    font-size: 18px;
+    cursor: pointer;
+}
+.s-btn:hover,.m-btn:hover  {
     background: #333;
     color: #fdae00;
 }
@@ -1366,4 +1366,13 @@ label.inline > a {
     top: 0;
     background: #fff;
     padding: 10px 15px;
+}
+.breadcrumb-title {
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.research-list {
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.15);
+    padding: 20px 10px;
 }
