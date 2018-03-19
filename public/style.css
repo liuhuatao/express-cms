@@ -1372,7 +1372,7 @@ label.inline > a {
 }
 
 .research-list {
-    box-shadow: 0 0 5px 0 rgba(0,0,0,.15);
+    background: #fff;
     padding: 20px 10px;
 }
 .research-list:hover {

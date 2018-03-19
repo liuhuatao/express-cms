@@ -1,10 +1,58 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "layouts/default.html" %}
 
-</body>
-</html>
+{% block content %}
+<div ng-controller="researchController">
+    <!-- Start page content -->
+    <div class="breadcrumb-area2 ptb-150 bg-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <div class="breadcrumb-wrap mt-20">
+                        <ul class="breadcrumb-list text-center">
+                            <li><a href="index.html">首页 </a></li>
+                            <li><a href="research.html?cid=141">学术 </a></li>
+                            <li><a href="javascript:location.reload();" ng-bind="category.title"></a></li>
+                        </ul>
+                    </div>
+                    <h2 class="breadcrumb-title text-white uppercase  mt-20">艺术评论</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- articles list start -->
+    <div class="banner-area pt-70 pb-70">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="row mb-50  research-list" ng-repeat="item in list.data">
+                        <div class="col-xs-4 col-sm-4 col-md-4">
+                            <div class="product-wrapper">
+                                <div class="product-img">
+                                    <a ng-href="{% raw %}{{'/article.html?id='+item.id}}{% endraw %}"><img ng-src="{% raw %}{{item.imgurl[0]}}{% endraw %}" alt=""/></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-7 col-sm-7 col-md-8">
+                            <div class="product-content product-list">
+                                <div class="pro-title">
+                                    <h2><a ng-href="{% raw %}{{'/article.html?id='+item.id}}{% endraw %}" ng-bind="item.title"></a></h2>
+                                </div>
+                                <!--<div class="pro-rating">
+                                    作者：<span>淳子</span>
+                                </div>-->
+                                <p ng-bind="item.description"></p>
+                                <a class="s-btn" ng-href="{% raw %}{{'/article.html?id='+item.id}}{% endraw %}"><i class="fa fa-file-text-o mr-10"></i><span>阅读全文 </span> </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-sortpagibar text-center">
+                <my-pagination page-option="option"></my-pagination>
+            </div>
+        </div>
+    </div>
+    <!-- articles list end -->
+    <!-- End page content -->
+</div>
+{% endblock %}

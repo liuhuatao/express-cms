@@ -3,6 +3,22 @@
 {% block content %}
 <!-- shop-area start -->
 <div class="shop-area" ng-controller="derivativeController">
+	<div class="breadcrumb-area2 ptb-150 bg-5">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 text-center">
+					<div class="breadcrumb-wrap mt-20">
+						<ul class="breadcrumb-list text-center">
+							<li><a href="index.html">首页 </a></li>
+							<li><a href="derivative.html?cid=150">衍生品 </a></li>
+							<li><a href="javascript:location.reload();" ng-bind="category.title"></a></li>
+						</ul>
+					</div>
+					<h2 class="breadcrumb-title text-white uppercase  mt-20">衍生品</h2>
+				</div>
+			</div>
+		</div>
+	</div>
 	<div class="container">
 		<div class="row">
 			<!--<div class="col-md-3 col-sm-4">
@@ -13,38 +29,38 @@
 				</div>
 			</div>-->
 			<div class="col-md-12 col-sm-12">
-				<h2 class="page-heading mt-40">
-					<span class="cat-name">盘子</span>
+				<!--<h2 class="page-heading mt-40">
+					<span class="cat-name"  ng-bind="category.title"></span>
 					<span class="heading-counter" ng-bind="'共有'+list.count+'件'"></span>
-				</h2>
+				</h2>-->
+				<ul class="custom-tab text-center mb-20">
+					<li class="active"><a href="works.html?cid=130" data-toggle="tab">服装</a></li>
+					<li><a href="derivative.html?cid=148" data-toggle="tab"> 饰品</a></li>
+					<li><a href="derivative.html?cid=149" data-toggle="tab"> 摆件</a></li>
+					<li><a href="derivative.html?cid=150" data-toggle="tab"></a></li>
+				</ul>
 				<div class="shop-page-bar">
-					<div>
-						<div class="shop-bar">
-						</div>
-						<!-- Tab panes -->
-						<div class="tab-content">
-							<div role="tabpanel" class="tab-pane active" id="home">
-								<div class="row">
-									<div class="col-md-4 col-sm-6" ng-repeat="item in list.data">
-										<div class="product-wrapper mb-40">
-											<div class="product-img">
-												<a ng-href="{%raw%}{{'product-details.html?id='+item.id}}{%endraw%}"><img ng-src="{% raw %}{{item.imgurl[0]}}{% endraw %}" alt="" /></a>
-											</div>
-											<div class="product-content">
-												<div class="pro-title">
-													<h3><a ng-href="{%raw%}{{'product-details.html?id='+item.id}}{%endraw%}" ng-bind="item.title">标题写在这里 </a></h3>
-												</div>
+					<!-- Tab panes -->
+					<div class="tab-content">
+						<div role="tabpanel" class="tab-pane active" id="home">
+							<div class="row">
+								<div class="col-md-4 col-sm-6" ng-repeat="item in list.data">
+									<div class="product-wrapper mb-40">
+										<div class="product-img">
+											<a ng-href="{%raw%}{{'product-details.html?id='+item.id}}{%endraw%}"><img ng-src="{% raw %}{{item.imgurl[0]}}{% endraw %}" alt="" /></a>
+										</div>
+										<div class="product-content">
+											<div class="pro-title">
+												<h3><a ng-href="{%raw%}{{'product-details.html?id='+item.id}}{%endraw%}" ng-bind="item.title">标题写在这里 </a></h3>
 											</div>
 										</div>
 									</div>
-
 								</div>
+
 							</div>
-							<div class="content-sortpagibar text-center">
-                                <div class="content-sortpagibar text-center">
-                                    <my-pagination page-option="option"></my-pagination>
-                                </div>
-							</div>
+						</div>
+						<div class="content-sortpagibar text-center">
+							<my-pagination page-option="option"></my-pagination>
 						</div>
 					</div>
 				</div>
