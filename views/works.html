@@ -23,10 +23,7 @@
         <div class="container">
             <div class="row">
                 <ul class="custom-tab text-center mb-20">
-                    <li class="active"><a href="works.html?cid=130" data-toggle="tab">绘画</a></li>
-                    <li><a href="works.html?cid=131" data-toggle="tab"> 陶瓷</a></li>
-                    <li><a href="works.html?cid=132" data-toggle="tab"> 摆件</a></li>
-                    <li><a href="works.html?cid=133" data-toggle="tab"> 雕塑</a></li>
+                    <li ng-class="cid==item.id?'active':''" ng-repeat="item in categoryList[0].children"><a href="javasript:;" ng-click="getDocumentByCId(item.id,1,12)" ng-bind="item.name">绘画</a></li>
                 </ul>
                 <div class="col-md-12 col-sm-8">
                     <div class="shop-page-bar">

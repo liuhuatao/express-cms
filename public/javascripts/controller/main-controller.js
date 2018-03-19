@@ -214,8 +214,8 @@ mainApp.factory('mainService', function ($http, $rootScope, $location) {
 //作品
 mainApp.controller('worksController', function ($scope, $http, mainService, $rootScope) {
   var cid = mainService.getQueryStringByName('cid');
-
   $scope.getDocumentById = getDocumentById;
+  $scope.getDocumentByCId = getDocumentByCId;
   $scope.option = {};
   init();
 
@@ -225,6 +225,7 @@ mainApp.controller('worksController', function ($scope, $http, mainService, $roo
 
   //获取分类详细
   function getDocumentByCId(cid, pageIndex, pageSize) {
+    $scope.cid = cid;
     mainService.getDocumentByCId(cid, pageIndex, pageSize, function (res) {
       $scope.list = res.data.data;
       //设置分页的参数
