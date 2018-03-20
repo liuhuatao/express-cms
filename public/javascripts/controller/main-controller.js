@@ -227,6 +227,7 @@ mainApp.controller('worksController', function ($scope, $http, mainService, $roo
   function getDocumentByCId(cid, pageIndex, pageSize) {
     $scope.cid = cid;
     mainService.getDocumentByCId(cid, pageIndex, pageSize, function (res) {
+      console.log(res.data.data);
       $scope.list = res.data.data;
       //设置分页的参数
       $scope.option = {
