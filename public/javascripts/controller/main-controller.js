@@ -271,6 +271,7 @@ mainApp.controller('photoController', function ($scope, $http, mainService, $roo
   }
 
   function getDocumentByCId(cid, pageIndex, pageSize) {
+    $scope.cid = cid;
     mainService.getDocumentByCId(cid, pageIndex, pageSize, function (res) {
       $scope.list = res.data.data;
       console.log($scope.list);
@@ -433,6 +434,7 @@ mainApp.controller('derivativeController', function ($scope, $http, mainService,
   }
 
   function getDocumentByCId(cid, pageIndex, pageSize) {
+    $scope.cid = cid;
     mainService.getDocumentByCId(cid, pageIndex, pageSize, function (res) {
       $scope.list = res.data.data;
       $scope.option = {
