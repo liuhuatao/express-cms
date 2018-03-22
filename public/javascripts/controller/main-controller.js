@@ -81,6 +81,7 @@ mainApp.directive('myPagination', function () {
 });
 
 mainApp.controller('bodyController', function ($rootScope, $scope, mainService) {
+
   var cid = mainService.getQueryStringByName('cid');
   $rootScope.isActive = isActive;
   $rootScope.goUrl = goUrl;
@@ -114,8 +115,16 @@ mainApp.controller('bodyController', function ($rootScope, $scope, mainService) 
     window.open(url);
   }
 
+  function setcookie(c_name, value, expiredays) {
+    var exdate = new Date();
+    exdate.setDate(exdate.getDate() + expiredays)
+    document.cookie = c_name + "=" + escape(value) +
+      ((expiredays == null) ? "" : ";expires=" + exdate.toGMTString())
+  }
+
   getCategoryById(cid);
   getAllCategory();
+
 });
 
 mainApp.factory('mainService', function ($http, $rootScope, $location) {

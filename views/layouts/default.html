@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="en" ng-app="mainApp">
+<html class="no-js" lang="en" ng-app="mainApp" >
 
 <head>
     <meta charset="utf-8">
@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="/css/responsive.css">
     <!-- User style -->
     <link rel="stylesheet" href="/css/custom.css">
-    <link rel="stylesheet" href="/css/shortcode/director.css" />
+    <link rel="stylesheet" href="/css/shortcode/director.css"/>
     <!-- Modernizr JS -->
     <script src="/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
@@ -51,7 +51,9 @@
                                 <ul>
                                     <li><a href="index.html">首页</a>
                                     </li>
-                                    <li><a ng-href="{% raw %}{{'works.html?cid='+categoryList[0].children[0].id}}{% endraw %}" ng-class="isActive('works')">艺术作品</a>
+                                    <li>
+                                        <a ng-href="{% raw %}{{'works.html?cid='+categoryList[0].children[0].id}}{% endraw %}"
+                                           ng-class="isActive('works')">艺术作品</a>
                                         <ul class="submenu">
                                             <li ng-repeat="item in categoryList[0].children"><a
                                                     ng-href="{% raw %}{{'works.html?cid='+item.id}}{% endraw %}"
@@ -69,7 +71,8 @@
                                         </ul>
                                     </li>
                                     <li>
-                                        <a ng-href="{% raw %}{{'research.html?cid='+categoryList[2].children[0].id}}{% endraw %}" ng-class="isActive('research')">学术</a>
+                                        <a ng-href="{% raw %}{{'research.html?cid='+categoryList[2].children[0].id}}{% endraw %}"
+                                           ng-class="isActive('research')">学术</a>
                                         <ul class="submenu">
                                             <li ng-repeat="item in categoryList[2].children"><a
                                                     ng-href="{% raw %}{{'research.html?cid='+item.id}}{% endraw %}"
@@ -100,7 +103,8 @@
 
                     </div>
                     <div class="col-md-2 col-sm-3 col-xs-12">
-                        <div class="display-inline  pull-right" id="google_translate_element" style="height: 53px;overflow: hidden;margin-top: 10px;">
+                        <div class="display-inline  pull-right" id="google_translate_element"
+                             style="height: 53px;overflow: hidden;margin-top: 10px;">
                             <!--<a href="#">选择语言：<b>中文<i class="fa fa-angle-down ml-15"></i></b></a>-->
                             <!--<ul class="">-->
                             <!--<li>-->
@@ -151,7 +155,7 @@
     <!-- Modal -->
     <div class="modal fade" id="productModal" tabindex="-1" role="dialog">
         <div class="modal-img">
-            <a href="shop.html"><img ng-src="{% raw %}{{apiUrl+detail.atlas[0].src}}{% endraw %}" alt=""/></a>
+            <a href="shop.html"><img ng-src="{% raw %}{{detail.atlas[0].src}}{% endraw %}" alt=""/></a>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                     aria-hidden="true">x</span>
             </button>
@@ -159,7 +163,7 @@
                 <div class="price-box">
                     <span class="price product-price" ng-bind="detail.title">作品名称</span>
                 </div>
-                <a class="s-btn pull-right" ng-click="goUrl(detail.link_id)"><i class="fa fa-commenting-o mr-10"></i>艺术评论</a>
+                <a class="s-btn pull-right" ng-click="goUrl(detail.link_id)" ng-if="detail.link_id"><i class="fa fa-commenting-o mr-10"></i>艺术评论</a>
             </div>
 
         </div>
@@ -218,34 +222,12 @@
 <script src='/js/pieces.min.js'></script>
 <script src='/js/demo.js'></script>
 <script>
-    var router = '{{router}}';
+  var router = '{{router}}';
+  var tis;
 
-    function googleTranslateElementInit() {
-        new google.translate.TranslateElement(
-            {
-                pageLanguage: 'cn',
-                includedLanguages: 'en,zh-CN'
-            },
-            'google_translate_element'
-        );
-
-        /*
-            To remove the "powered by google",
-            uncomment one of the following code blocks.
-            NB: This breaks Google's Attribution Requirements:
-            https://developers.google.com/translate/v2/attribution#attribution-and-logos
-        */
-
-        // Native (but only works in browsers that support query selector)
-        //if(typeof(document.querySelector) == 'function') {
-        //    document.querySelector('.goog-logo-link').setAttribute('style', 'display: none');
-        //    document.querySelector('.goog-te-gadget').setAttribute('style', 'font-size: 0');
-        //}
-
-        // If you have jQuery - works cross-browser - uncomment this
-        //jQuery('.goog-logo-link').css('display', 'none');
-        //jQuery('.goog-te-gadget').css('font-size', '0');
-    }
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+  }
 
 </script>
 <script src="/js/google-translate.js"></script>
