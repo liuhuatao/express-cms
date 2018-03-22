@@ -45,10 +45,16 @@
 									<div class="product-wrapper mb-40">
 										<div class="product-img">
 											<a ng-href="{%raw%}{{'product-details.html?id='+item.id}}{%endraw%}"><img ng-src="{% raw %}{{item.imgurl[0]}}{% endraw %}" alt="" /></a>
+											<div class="product-action" ng-click="getDocumentById(item.id)">
+												<a href="#" data-toggle="modal" data-target="#productModal"><i class="pe-7s-look"></i></a>
+											</div>
 										</div>
 										<div class="product-content">
-											<div class="pro-title">
-												<h3><a ng-href="{%raw%}{{'product-details.html?id='+item.id}}{%endraw%}" ng-bind="item.title">标题写在这里 </a></h3>
+											<div class="price-reviews">
+												<div class="price-box">
+													<span class="price product-price" ng-bind="item.title"></span>
+												</div>
+												<a class="s-btn pull-right"ng-click="goUrl(detail.link_id)" ng-show="item.link_id"><i class="fa fa-cart-plus mr-10"></i>购买</a>
 											</div>
 										</div>
 									</div>
