@@ -142,6 +142,10 @@ text-decoration: line-through;
   text-decoration: none;
   text-transform: capitalize;
 }
+.pro-title h3 {
+  color: #333;
+  font-size: 18px;
+}
 .pro-title h3 a:hover,.pro-rating a:hover{color: #ffae00;}
 .tab-content > .tab-pane {
   display: block;
@@ -638,4 +642,22 @@ text-transform: uppercase;}
 }
 .pro-desc > p {
   margin: 0;
+}
+.books_bg {
+    height: 440px;
+  background: url("../../img/books/bg.png") no-repeat bottom;
+}
+.books_bg ul {
+    width: 1000px;
+    margin: 10px auto;
+}
+.books_bg ul li {
+    float: left;
+    width: 250px;
+    height: 310px;
+}
+.books_bg ul li a {
+    display: block;
+    width: 250px;
+    height: 310px;
 }

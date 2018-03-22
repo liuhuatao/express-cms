@@ -36,17 +36,17 @@
 <!-- Body main wrapper start -->
 <div class="wrapper">
     <!-- Start of header area -->
-    <header class="intelligent-header header-black header-area elements1">
-        <div class="header-black-area header-middle">
+    <header class="header-pos elements1">
+        <div class="header-area header-middle">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-2 col-sm-3 col-xs-12">
                         <div class="logo">
-                            <a href="index.html"><img src="img/logo/logo.png" alt=""/></a>
+                            <a href="index.html"><img src="img/logo/logo-black.png" alt=""/></a>
                         </div>
                     </div>
                     <div class="col-md-8 col-sm-6 col-xs-12 text-right xs-center">
-                        <div class="main-menu menu-style-black display-inline hidden-sm header-3">
+                        <div class="main-menu display-inline hidden-sm hidden-xs">
                             <nav>
                                 <ul>
                                     <li><a href="index.html">首页</a>
@@ -74,6 +74,7 @@
                                             <li ng-repeat="item in categoryList[2].children"><a
                                                     ng-href="{% raw %}{{'research.html?cid='+item.id}}{% endraw %}"
                                                     ng-bind="item.name">艺术评论</a></li>
+                                            <li><a href="books.html">出版著作</a></li>
                                         </ul>
                                     </li>
                                     <li>
