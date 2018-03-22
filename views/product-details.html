@@ -10,45 +10,10 @@
                 <div class="product-zoom">
                     <!-- Tab panes -->
                     <div class="tab-content">
-                        <div class="tab-pane active" id="home">
+                        <div class="tab-pane active" id="home" ng-repeat="item in detail.atlas">
                             <div class="pro-large-img">
-                                <img src="img/product/1.jpg" alt=""/>
-                                <a class="popup-link" href="img/product/1.jpg">查看<i class="fa fa-search-plus"
-                                                                                    aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-                        <div class="tab-pane" id="profile">
-                            <div class="pro-large-img">
-                                <img src="img/product/2.jpg" alt=""/>
-                                <a class="popup-link" href="img/product/2.jpg">查看<i class="fa fa-search-plus"
-                                                                                    aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-                        <div class="tab-pane" id="messages">
-                            <div class="pro-large-img">
-                                <img src="img/product/3.jpg" alt=""/>
-                                <a class="popup-link" href="img/product/3.jpg">查看<i class="fa fa-search-plus"
-                                                                                    aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-                        <div class="tab-pane" id="settings">
-                            <div class="pro-large-img">
-                                <img src="img/product/4.jpg" alt=""/>
-                                <a class="popup-link" href="img/product/4.jpg">查看<i class="fa fa-search-plus"
-                                                                                    aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-                        <div class="tab-pane" id="settings2">
-                            <div class="pro-large-img">
-                                <img src="img/product/5.jpg" alt=""/>
-                                <a class="popup-link" href="img/product/5.jpg">查看<i class="fa fa-search-plus"
-                                                                                    aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-                        <div class="tab-pane" id="settings3">
-                            <div class="pro-large-img">
-                                <img src="img/product/6.jpg" alt=""/>
-                                <a class="popup-link" href="img/product/6.jpg">查看<i class="fa fa-search-plus"
+                                <img ng-src="{% raw %}{{item.src}}{% endraw %}" alt=""/>
+                                <a class="popup-link" ng-href="{% raw %}{{item.src}}{% endraw %}">查看<i class="fa fa-search-plus"
                                                                                     aria-hidden="true"></i></a>
                             </div>
                         </div>
@@ -57,12 +22,12 @@
             </div>
             <div class="col-xs-12 col-sm-6 col-md-7">
                 <div class="product-details">
-                    <h2 class="pro-d-title" ng-bind="detail.title">陈俊毅抽象油画 盘子 型號00114</h2>
+                    <h2 class="pro-d-title" ng-bind="detail.title"></h2>
                     <div class="short-desc">
-                        <p ng-bind="detail.description">商品簡介商品簡介商品簡介商品簡介商品簡介商品簡介商品簡介商品簡介商品簡介商品簡介商品簡介商品簡介商品簡介商品簡介</p>
+                        <p ng-bind="detail.description"></p>
                     </div>
                     <div class="box-quantity">
-                        <button>立即购买</button>
+                        <button ng-click="goUrl(detail.link_id)">立即购买</button>
                     </div>
                 </div>
             </div>

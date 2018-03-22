@@ -227,6 +227,7 @@ mainApp.controller('worksController', function ($scope, $http, mainService, $roo
   function getDocumentByCId(cid, pageIndex, pageSize) {
     $scope.cid = cid;
     mainService.getDocumentByCId(cid, pageIndex, pageSize, function (res) {
+      console.log(res.data.data);
       $scope.list = res.data.data;
       //设置分页的参数
       $scope.option = {
@@ -267,10 +268,11 @@ mainApp.controller('photoController', function ($scope, $http, mainService, $roo
   init();
 
   function init() {
-    getDocumentByCId(cid, 1, 10);
+    getDocumentByCId(cid, 1, 12);
   }
 
   function getDocumentByCId(cid, pageIndex, pageSize) {
+    $scope.cid = cid;
     mainService.getDocumentByCId(cid, pageIndex, pageSize, function (res) {
       $scope.list = res.data.data;
       console.log($scope.list);
@@ -282,7 +284,7 @@ mainApp.controller('photoController', function ($scope, $http, mainService, $roo
 
         //点击页数的回调函数，参数page为点击的页数
         click: function (page) {
-          getDocumentByCId(cid, page, 10);
+          getDocumentByCId(cid, page, 12);
           //这里可以写跳转到某个页面等...
         }
       }
@@ -433,6 +435,7 @@ mainApp.controller('derivativeController', function ($scope, $http, mainService,
   }
 
   function getDocumentByCId(cid, pageIndex, pageSize) {
+    $scope.cid = cid;
     mainService.getDocumentByCId(cid, pageIndex, pageSize, function (res) {
       $scope.list = res.data.data;
       $scope.option = {

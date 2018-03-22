@@ -34,10 +34,7 @@
 					<span class="heading-counter" ng-bind="'共有'+list.count+'件'"></span>
 				</h2>-->
 				<ul class="custom-tab text-center mb-20">
-					<li class="active"><a href="works.html?cid=130" data-toggle="tab">服装</a></li>
-					<li><a href="derivative.html?cid=148" data-toggle="tab"> 饰品</a></li>
-					<li><a href="derivative.html?cid=149" data-toggle="tab"> 摆件</a></li>
-					<li><a href="derivative.html?cid=150" data-toggle="tab"></a></li>
+					<li ng-class="cid==item.id?'active':''"  ng-repeat="item in categoryList[4].children"><a ng-click="getDocumentByCId(item.id,1,12)" ng-bind="item.name">服装</a></li>
 				</ul>
 				<div class="shop-page-bar">
 					<!-- Tab panes -->
