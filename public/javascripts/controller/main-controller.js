@@ -85,6 +85,7 @@ mainApp.controller('bodyController', function ($rootScope, $scope, mainService) 
   var cid = mainService.getQueryStringByName('cid');
   $rootScope.isActive = isActive;
   $rootScope.goUrl = goUrl;
+  $rootScope.router = router;
 
 
   function isActive(item) {
@@ -96,6 +97,7 @@ mainApp.controller('bodyController', function ($rootScope, $scope, mainService) 
   function getAllCategory() {
     mainService.getAllCategory(function (res) {
       $scope.categoryList = res.data.data;
+      getDocumentByCId($scope.categoryList[3].children[0].id, 1, 2);
       console.log($scope.categoryList);
     }, function (err) {
       console.log(JSON.stringify(err));
@@ -120,6 +122,29 @@ mainApp.controller('bodyController', function ($rootScope, $scope, mainService) 
     exdate.setDate(exdate.getDate() + expiredays)
     document.cookie = c_name + "=" + escape(value) +
       ((expiredays == null) ? "" : ";expires=" + exdate.toGMTString())
+  }
+
+
+  //获取文章列表
+  function getDocumentByCId(cid, pageIndex, pageSize) {
+    mainService.getDocumentByCId(cid, pageIndex, pageSize, function (res) {
+      $scope.list = res.data.data;
+      console.log($scope.list);
+      //设置分页的参数
+      $scope.option = {
+        curr: $scope.list.currentPage,  //当前页数
+        all: $scope.list.totalPages,  //总页数
+        count: $scope.list.pageSize,  //最多显示的页数，默认为10
+
+        //点击页数的回调函数，参数page为点击的页数
+        click: function (page) {
+          getDocumentByCId(cid, page, 10);
+          //这里可以写跳转到某个页面等...
+        }
+      }
+    }, function (err) {
+      console.log(JSON.stringify(err));
+    })
   }
 
   getCategoryById(cid);

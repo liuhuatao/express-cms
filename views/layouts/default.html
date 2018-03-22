@@ -36,92 +36,10 @@
 <!-- Body main wrapper start -->
 <div class="wrapper">
     <!-- Start of header area -->
-    <header class="header-pos elements1">
-        <div class="header-area header-middle">
+    <header class="intelligent-header header-black header-area elements1">
+        <div class="header-black-area header-middle">
             <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-2 col-sm-3 col-xs-12">
-                        <div class="logo">
-                            <a href="index.html"><img src="img/logo/logo-black.png" alt=""/></a>
-                        </div>
-                    </div>
-                    <div class="col-md-8 col-sm-6 col-xs-12 text-right xs-center">
-                        <div class="main-menu display-inline hidden-sm hidden-xs">
-                            <nav>
-                                <ul>
-                                    <li><a href="index.html">首页</a>
-                                    </li>
-                                    <li>
-                                        <a ng-href="{% raw %}{{'works.html?cid='+categoryList[0].children[0].id}}{% endraw %}"
-                                           ng-class="isActive('works')">艺术作品</a>
-                                        <ul class="submenu">
-                                            <li ng-repeat="item in categoryList[0].children"><a
-                                                    ng-href="{% raw %}{{'works.html?cid='+item.id}}{% endraw %}"
-                                                    ng-bind="item.name"></a></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="director.html" ng-class="isActive('director')">导演艺术</a>
-                                    </li>
-                                    <li>
-                                        <a href="about.html" ng-class="isActive('about')">简介</a>
-                                        <ul class="submenu">
-                                            <li><a href="about.html">个人简介</a></li>
-                                            <li><a href="photo.html?cid=134">相册</a></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a ng-href="{% raw %}{{'research.html?cid='+categoryList[2].children[0].id}}{% endraw %}"
-                                           ng-class="isActive('research')">学术</a>
-                                        <ul class="submenu">
-                                            <li ng-repeat="item in categoryList[2].children"><a
-                                                    ng-href="{% raw %}{{'research.html?cid='+item.id}}{% endraw %}"
-                                                    ng-bind="item.name">艺术评论</a></li>
-                                            <li><a href="books.html">出版著作</a></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="news.html?cid=144" ng-class="isActive('news')">动态</a>
-                                        <ul class="submenu">
-                                            <li ng-repeat="item in categoryList[3].children"><a
-                                                    ng-href="{% raw %}{{'news.html?cid='+item.id}}{% endraw %}"
-                                                    ng-bind="item.name">新闻</a></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a ng-href="{% raw %}{{'derivative.html?cid='+categoryList[4].children[0].id}}{% endraw %}"
-                                           ng-class="isActive('derivative')">衍生品</a>
-                                        <ul class="submenu">
-                                            <li ng-repeat="item in categoryList[4].children"><a
-                                                    ng-href="{% raw %}{{'derivative.html?cid='+item.id}}{% endraw %}"
-                                                    ng-bind="item.name">服装</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="contact.html" ng-class="isActive('contact')">联系</a></li>
-                                </ul>
-                            </nav>
-                        </div>
-
-                    </div>
-                    <div class="col-md-2 col-sm-3 col-xs-12">
-                        <div class="display-inline  pull-right" id="google_translate_element"
-                             style="height: 53px;overflow: hidden;margin-top: 10px;">
-                            <!--<a href="#">选择语言：<b>中文<i class="fa fa-angle-down ml-15"></i></b></a>-->
-                            <!--<ul class="">-->
-                            <!--<li>-->
-                            <!--<div class="cart-content">-->
-                            <!--<h3><a href="#"> 中文</a></h3>-->
-                            <!--</div>-->
-                            <!--</li>-->
-                            <!--<li>-->
-                            <!--<div class="cart-content">-->
-                            <!--<h3><a href="#">英文</a></h3>-->
-                            <!--</div>-->
-                            <!--</li>-->
-                            <!--</ul>-->
-                        </div>
-                    </div>
-                </div>
+                {% include "layouts/header.html" %}
             </div>
         </div>
     </header>
@@ -164,7 +82,7 @@
                 <div class="price-box">
                     <span class="price product-price" ng-bind="detail.title">作品名称</span>
                 </div>
-                <a class="s-btn pull-right" ng-click="goUrl(detail.link_id)" ng-if="detail.link_id"><i class="fa fa-commenting-o mr-10"></i>艺术评论</a>
+                <a class="s-btn pull-right" ng-click="goUrl(detail.link_id)" ng-if="detail.link_id"><i class="fa fa-commenting-o mr-10"></i>{% raw %}{{router=='derivative'?'购买':'艺术评论'}}{% endraw %}</a>
             </div>
 
         </div>
