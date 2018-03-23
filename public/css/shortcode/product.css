@@ -1,5 +1,5 @@
 .custom-tab{
-  margin: 15px auto;
+  margin: 30px auto;
   display: table;
 }
 .custom-tab li {
@@ -122,7 +122,7 @@ text-decoration: line-through;
 }
 .price-box {
   float: left;
-  height: 26px;
+  height: 32px;
   border-bottom: 2px solid #333;
 }
 .old-price{}
@@ -644,7 +644,7 @@ text-transform: uppercase;}
   margin: 0;
 }
 .books_bg {
-    height: 440px;
+    height: 458px;
   background: url("../../img/books/bg.png") no-repeat bottom;
 }
 .books_bg ul {

@@ -92,6 +92,9 @@
     position: absolute;
     top: 2px;
 }
+.b-bg-10 .breadcrumb-list > li::after {
+    color: #333;
+}
 .breadcrumb-list > li:first-child {
     margin-left: 0;
 }
@@ -1314,7 +1317,7 @@ label.inline > a {
 .video-icon:hover{ color: #ffae00;}
 
 .container-ms { width: 750px;}
-.container-ms .blog-info h3 a {
+.container-ms .blog-info h3 a,.container .blog-info h3 a {
      text-align: center;
      font-size: 30px;
  }
@@ -1326,6 +1329,7 @@ label.inline > a {
 .article img {
     display: block;
     margin: 0 auto 20px;
+    width: 100%;
 }
 
 .s-btn {;
@@ -1377,4 +1381,63 @@ label.inline > a {
 }
 .research-list:hover {
     box-shadow: 0 0 5px 0 rgba(225,174,0,.3);
+}
+.b-bg-10 {
+    width: 100%;
+    min-height: 100vh;
+    background-size: cover;
+    background-image: url("img/bg2.jpg");
+
+}
+.article-box {
+    background: #fff;
+    padding: 20px 15px;
+}
+.article-box h3 {
+    font-size: 30px;
+    color: #333;
+    font-weight: 800;
+}
+
+.sidebar {
+    min-width: 368px;
+    max-width: 368px;
+}
+.sidebar-list {
+    padding: 30px 20px;
+    background: #fff;
+}
+.sidebar .heading {
+    background: url("img/title.png") repeat-x center;
+}
+.sidebar .heading h4 {
+    display: -webkit-inline-box;
+    background: #fff;
+    color: #333;
+    font-weight: 800;
+    padding: 0 10px;
+    margin-left: 10px;
+}
+.sidebar-list ul li a {
+    color: #333;
+    line-height: 40px;
+    font-size: 16px;
+}
+.sidebar-list ul li a:hover {
+    color: #fdae00;
+}
+.sidebar-list ul li a.current {
+    color: #fdae00;
+    font-weight: 600;
+    border-bottom: 1px dotted #fdae00;
+}
+.sidebar-img {
+    width: 368px;
+    height: 380px;
+    background: url("img/books/bg2.jpg") no-repeat bottom;
+}
+.sidebar-img img {
+    top: 25px;
+    margin-left: 60px;
+    position: absolute;
 }

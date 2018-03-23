@@ -167,7 +167,9 @@
                                                 <div class="col-lg-12">
                                                     <div class="blog-wrapper mb-40">
                                                         <div class="blog-img">
-                                                            <a ng-href="{% raw %}{{'/article.html?id='+item.id}}{% endraw %}"><img ng-src="{% raw %}{{item.imgurl[0]}}{% endraw %}" alt=""></a>
+                                                            <a ng-href="{% raw %}{{'/article.html?id='+item.id}}{% endraw %}">
+                                                                <img ng-src="{% raw %}{{item.imgurl[0]}}{% endraw %}" style="height: 330px" alt="">
+                                                            </a>
                                                         </div>
                                                         <div class="blog-info">
                                                             <h3><a ng-href="{% raw %}{{'/article.html?id='+item.id}}{% endraw %}" ng-bind="item.title"></a></h3>
