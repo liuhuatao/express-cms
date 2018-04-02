@@ -523,7 +523,6 @@ mainApp.controller('productDetailController', function ($scope, $http, mainServi
 });
 
 //出版著作
-//相册
 mainApp.controller('chubanzhuzuoController', function ($scope, $http, mainService, $sce) {
   var cid = mainService.getQueryStringByName('cid');
   $scope.getDocumentByCId = getDocumentByCId;
@@ -554,6 +553,18 @@ mainApp.controller('chubanzhuzuoController', function ($scope, $http, mainServic
     }, function (err) {
       console.log(JSON.stringify(err));
     })
+  }
+});
+
+mainApp.controller('contactController', function ($scope, $http, mainService, $sce) {
+  $scope.sendMail = sendMail;
+  $scope.title = '';
+  $scope.name = '';
+  $scope.email = '';
+  $scope.content = '';
+
+  function sendMail() {
+    window.location.href = 'mailto:jbcusa@qq.com?subject=' +  $scope.title + ' 姓名:' + $scope.name + ' 邮箱：' + $scope.email+ '&body=' + $scope.content
   }
 });
 

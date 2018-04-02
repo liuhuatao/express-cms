@@ -1,7 +1,24 @@
 ﻿{% extends "layouts/default.html" %}
 
 {% block content %}
+<style>
+	.submit{
+		background: #252525 none repeat scroll 0 0;
+		border: medium none;
+		border-radius: 0;
+		color: #fff;
+		font-size: 12px;
+		font-weight: 700;
+		height: 40px;
+		margin-top: 16px;
+		padding: 0 15px;
+		text-transform: uppercase;
+		transition: all 0.3s ease 0s;
+		width: 140px;
+	}
+</style>
 <!-- contact-area start -->
+<div ng-controller="contactController">
 <div class="breadcrumb-area2 ptb-150 bg-6">
 	<div class="container">
 		<div class="row">
@@ -45,19 +62,19 @@
 				<div class="contact-form">
 					<h3><i class="fa fa-envelope-o"></i> 留言</h3>
 					<div class="row">
-						<form id="contact-form" action="mail.php" method="post">
+						<form id="contact-form" action="" method="post">
 							<div class="col-md-6 col-sm-6 col-xs-12">
-								<input name="name" type="text" placeholder="姓名" />
+								<input name="name" type="text" placeholder="姓名"  ng-model="name"/>
 							</div>
 							<div class="col-md-6 col-sm-6 col-xs-12">
-								<input name="email" type="email" placeholder="Email" />
+								<input name="email" type="email" placeholder="Email" ng-model="email"/>
 							</div>
 							<div class="col-md-12 col-sm-12 col-xs-12">
-								<input name="subject" type="text" placeholder="标题" />
+								<input name="subject" type="text" placeholder="标题" ng-model="title"/>
 							</div>
 							<div class="col-md-12 col-sm-12 col-xs-12">
-								<textarea name="message" id="message" cols="30" rows="10" placeholder="内容"></textarea>
-								<input type="submit" value="发送消息" />
+								<textarea name="message" id="message" cols="30" rows="10" placeholder="内容" ng-model="content"></textarea>
+								<input type="button" class="submit" ng-click="sendMail();" value="发送消息" />
 							</div>
 						</form>
 						<p class="form-messege"></p>
@@ -66,6 +83,7 @@
 			</div>
 		</div>
 	</div>
+</div>
 </div>
 <!-- contact-area end -->
 {% endblock %}
