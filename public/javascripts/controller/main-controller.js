@@ -522,3 +522,38 @@ mainApp.controller('productDetailController', function ($scope, $http, mainServi
   }
 });
 
+//出版著作
+//相册
+mainApp.controller('chubanzhuzuoController', function ($scope, $http, mainService, $sce) {
+  var cid = mainService.getQueryStringByName('cid');
+  $scope.getDocumentByCId = getDocumentByCId;
+  $scope.getDocumentById = getDocumentById;
+  init();
+
+  function init() {
+    getDocumentByCId(cid, 1, 100);
+  }
+
+  function getDocumentByCId(cid, pageIndex, pageSize) {
+    $scope.cid = cid;
+    mainService.getDocumentByCId(cid, pageIndex, pageSize, function (res) {
+      $scope.list = res.data.data;
+      getDocumentById($scope.list.data[0].id);
+      console.log($scope.list);
+    }, function (err) {
+      console.log(JSON.stringify(err));
+    })
+  }
+
+  function getDocumentById(id) {
+    $scope.id = id;
+    mainService.getDocumentById(id, function (res) {
+      $scope.article = res.data.data;
+      $scope.article.content = $sce.trustAsHtml($scope.article.content);
+      console.log($scope.article);
+    }, function (err) {
+      console.log(JSON.stringify(err));
+    })
+  }
+});
+
