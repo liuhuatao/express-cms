@@ -139,7 +139,7 @@
     content: "";
 }
 
-.index_inner .solgan h2 {
+.index_inner .solgan img {
     position: relative;
     color: #fff;
     font-size: 64px;
@@ -148,12 +148,12 @@
     text-shadow: 0 20px 20px rgba(0, 0, 0, .48);
     opacity: 0;
 }
-.index_inner .solgan h2 span {
+.index_inner .solgan img span {
     font-size: 78px;
     color: #fff;
 }
 
-.current .slide .current .solgan h2 {
+.current .slide .current .solgan img {
     -webkit-animation: fadeInDown ease .4s forwards .2s;
     -moz-animation: fadeInDown ease .4s forwards .2s;
     -ms-animation: fadeInDown ease .4s forwards .2s;
