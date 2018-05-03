@@ -153,7 +153,7 @@ mainApp.controller('bodyController', function ($rootScope, $scope, mainService) 
 });
 
 mainApp.factory('mainService', function ($http, $rootScope, $location) {
-  $rootScope.apiUrl = 'http://118.25.25.192:8360';
+  $rootScope.apiUrl = 'http://chenjunyi.liuhuatao.com';
   var apiUrl = $rootScope.apiUrl;
   return {
     getDocumentById: getDocumentById,
@@ -445,6 +445,7 @@ mainApp.controller('articleController', function ($scope, $http, mainService, $s
   function getArticleById(id) {
     mainService.getDocumentById(id, function (res) {
       $scope.article = res.data.data;
+      $scope.article.content =   $scope.article.content.replace('/upload/editor', "http://chenjunyi.liuhuatao.com/upload/editor");
       $scope.article.content = $sce.trustAsHtml($scope.article.content);
       console.log($scope.article);
     }, function (err) {
@@ -548,6 +549,7 @@ mainApp.controller('chubanzhuzuoController', function ($scope, $http, mainServic
     $scope.id = id;
     mainService.getDocumentById(id, function (res) {
       $scope.article = res.data.data;
+      $scope.article.content =   $scope.article.content.replace('/upload/editor', "http://chenjunyi.liuhuatao.com/upload/editor");
       $scope.article.content = $sce.trustAsHtml($scope.article.content);
       console.log($scope.article);
     }, function (err) {
