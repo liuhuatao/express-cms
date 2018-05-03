@@ -25,6 +25,7 @@
 .product-wrapper a {
   display: block;
   position: relative;
+  font-size: 16px;
 }
 .product-img  {
   position:relative;
@@ -358,7 +359,7 @@ clear: both;
 line-height: 30px;
 margin-bottom: 30px;
 margin-top: 25px;
-padding: 20px 0;}
+padding: 15px 0;}
 .product-list .product-action a {
   color: #232323;
 }
