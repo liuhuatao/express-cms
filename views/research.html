@@ -37,9 +37,10 @@
                                 <div class="pro-title">
                                     <h2><a ng-href="{% raw %}{{'/article.html?id='+item.id}}{% endraw %}" ng-bind="item.title"></a></h2>
                                 </div>
-                                <!--<div class="pro-rating">
-                                    作者：<span>淳子</span>
-                                </div>-->
+                                <div class="blog-meta blog-large">
+                                    <span><i class="fa fa-clock-o" aria-hidden="true"></i> {% raw %}{{article.create_time|date:'yyyy.MM.dd'}}{% endraw %}</span>
+                                    <span class="ml-15"><i class="fa fa-user-circle-o" aria-hidden="true"></i>淳子</span>
+                                </div>
                                 <p ng-bind="item.description"></p>
                                 <a class="s-btn" ng-href="{% raw %}{{'/article.html?id='+item.id}}{% endraw %}"><i class="fa fa-file-text-o mr-10"></i><span>阅读全文 </span> </a>
                             </div>
