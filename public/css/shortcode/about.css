@@ -2209,7 +2209,7 @@ button:disabled,
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
-    width: 22rem;
+    width: 30rem;
 }
 
 .panel > .intro.joined {
