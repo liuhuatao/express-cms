@@ -50,6 +50,6 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-console.info('http://127.0.0.1:8088');
+console.info('http://127.0.0.1:3000');
 
 module.exports = app;
