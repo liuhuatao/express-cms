@@ -1,29 +1,3 @@
-/*-----------------------------------------------------------------------------------
-
-    Template Name: Gicor eCommerce Furniture  Template
-    Description: This is html5 template
-    Author: HasTech
-    Version: 1.0
-
------------------------------------------------------------------------------------
-    
-    [Table of contents]
-	
-    1. Promo style
-    2. Breadcrumb style
-    3. Banner area
-    4. Section title
-    5. Welcome store text
-    6. Wishlist area
-    7. Cart page
-    8. Checkout page
-    9. Login area
-    10. Elements
------------------------------------------------------------------------------------*/
-/*----------------------------------------*/
-/*  1. Promo style
-/*----------------------------------------*/
-
 .btn {
     background-color: #444;
     border: 0 none;
@@ -120,8 +94,8 @@
 /*  3. Banner area  */
 
 .banner-area {} .single-banner {} .single-banner img {
-    width: 100%;
-}
+                                      width: 100%;
+                                  }
 .single-banner a {
     display: inline-block;
     max-width: 100%;
@@ -203,16 +177,16 @@
 /*   4. Section title   */
 
 .section-title {} .section-title h2 {
-    color: #252525;
-    display: inline-block;
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 22px;
-    padding-bottom: 25px;
-    position: relative;
-    text-transform: uppercase;
-    z-index: 2;
-}
+                      color: #252525;
+                      display: inline-block;
+                      font-size: 24px;
+                      font-weight: 700;
+                      line-height: 22px;
+                      padding-bottom: 25px;
+                      position: relative;
+                      text-transform: uppercase;
+                      z-index: 2;
+                  }
 .section-title h2::before {
     background: #e1e1e1 none repeat scroll 0 0;
     bottom: 8px;
@@ -238,12 +212,12 @@
     width: 15px;
 }
 #furnituresletter_block_left {} #furnituresletter_block_left h4 {
-    color: #000;
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 8px;
-    text-transform: uppercase;
-}
+                                    color: #000;
+                                    font-size: 24px;
+                                    font-weight: 700;
+                                    margin-bottom: 8px;
+                                    text-transform: uppercase;
+                                }
 #furnituresletter_block_left h4 span {
     color: #ffae00;
 }
@@ -253,8 +227,8 @@
     font-style: italic;
 }
 .block_content {} .block_content form {
-    position: relative;
-}
+                      position: relative;
+                  }
 .block_content form input {
     background: #fff none repeat scroll 0 0;
     border: 0 none;
@@ -301,8 +275,8 @@
     opacity: 1;
 }
 .single-service {} .service-icon {
-    float: left;
-}
+                       float: left;
+                   }
 .border-bottom {
     border-bottom: 1px solid #ebebeb;
 }
@@ -342,12 +316,12 @@ a#scrollUp {
     width: 40px;
 }
 .newsletter-text {} .newsletter-text h4 {
-    color: #000;
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 8px;
-    text-transform: uppercase;
-}
+                        color: #000;
+                        font-size: 24px;
+                        font-weight: 700;
+                        margin-bottom: 8px;
+                        text-transform: uppercase;
+                    }
 .newsletter-text h4 span {
     color: #ffae00;
 }
@@ -360,12 +334,12 @@ a#scrollUp {
 /* 5. Welcome store text */
 
 .welcome-store-text {} .welcome-store-text h3 {
-    color: #b3b3b3;
-    font-size: 24px;
-    font-weight: 400;
-    letter-spacing: 0.5em;
-    text-transform: uppercase;
-}
+                           color: #b3b3b3;
+                           font-size: 24px;
+                           font-weight: 400;
+                           letter-spacing: 0.5em;
+                           text-transform: uppercase;
+                       }
 .welcome-store-text h2 {
     background: rgba(0, 0, 0, 0) url("img/bkg_title_static.png") no-repeat scroll center bottom;
     color: #000000;
@@ -416,17 +390,17 @@ a#scrollUp {
 -------------------------------------*/
 
 .wishlist-area {} .wishlist-content {} .wishlist-title {} .wishlist-title h2 {} .wishlist-table {} .wishlist-table table {
-    background: #fff none repeat scroll 0 0;
-    border-color: #e8e8e9;
-    border-radius: 0;
-    border-style: solid;
-    border-width: 1px 0 0 1px;
-    margin: 0 0 50px;
-    width: 100%;
-}
+                                                                                                       background: #fff none repeat scroll 0 0;
+                                                                                                       border-color: #e8e8e9;
+                                                                                                       border-radius: 0;
+                                                                                                       border-style: solid;
+                                                                                                       border-width: 1px 0 0 1px;
+                                                                                                       margin: 0 0 50px;
+                                                                                                       width: 100%;
+                                                                                                   }
 .wishlist-table table {} .wishlist-table table th {
-    font-weight: 600;
-}
+                             font-weight: 600;
+                         }
 .wishlist-table table th,
 .wishlist-table table td {
     border-bottom: 1px solid #e5e5e5;
@@ -468,15 +442,15 @@ a#scrollUp {
     width: 240px;
 }
 .wishlist-table table .wishlist-table table .wishlist-share {} h3.wishlist-share-title {} .wishlist-share {
-    margin-bottom: 35px;
-    margin-top: 20px;
-}
+                                                                                              margin-bottom: 35px;
+                                                                                              margin-top: 20px;
+                                                                                          }
 .wishlist-share ul {} .wishlist-share ul li {
-    display: inline-block;
-    height: 21px;
-    margin-left: 0;
-    margin-right: 0;
-}
+                          display: inline-block;
+                          height: 21px;
+                          margin-left: 0;
+                          margin-right: 0;
+                      }
 .wishlist-share ul li a {
     background-position: left top;
     border: medium none;
@@ -485,8 +459,8 @@ a#scrollUp {
     width: 21px;
 }
 .wishlist-share ul li a {} .wishlist-share ul li a {} .wishlist-share ul li a:hover {
-    background-position: left bottom;
-}
+                                                          background-position: left bottom;
+                                                      }
 .product-name > a {
     color: #444;
 }
@@ -498,43 +472,43 @@ a#scrollUp {
 ============================= */
 
 .cart-main-area {} .shipping_method input {
-    background: #eceff8 none repeat scroll 0 0;
-    border: 2px solid #eceff8;
-    box-shadow: none;
-    color: #626262;
-    font-size: 14px;
-    height: 45px;
-    padding-left: 10px;
-    width: inherit;
-}
+                       background: #eceff8 none repeat scroll 0 0;
+                       border: 2px solid #eceff8;
+                       box-shadow: none;
+                       color: #626262;
+                       font-size: 14px;
+                       height: 45px;
+                       padding-left: 10px;
+                       width: inherit;
+                   }
 .cart-title-area {
     padding-top: 30px;
 }
 .car-header-title {} .car-header-title h2 {
-    font-size: 20px;
-    margin: 0;
-    text-transform: uppercase;
-}
+                         font-size: 20px;
+                         margin: 0;
+                         text-transform: uppercase;
+                     }
 .table-content {} .table-content table {
-    background: #fff none repeat scroll 0 0;
-    border-color: #e5e5e5;
-    border-radius: 0;
-    border-style: solid;
-    border-width: 1px 0 0 1px;
-    margin: 0 0 50px;
-    text-align: center;
-    width: 100%;
-}
+                      background: #fff none repeat scroll 0 0;
+                      border-color: #e5e5e5;
+                      border-radius: 0;
+                      border-style: solid;
+                      border-width: 1px 0 0 1px;
+                      margin: 0 0 50px;
+                      text-align: center;
+                      width: 100%;
+                  }
 .table-content table {} .table-content table th {
-    border-top: medium none;
-    font-family: Montserrat, Arial, Helvetica, sans-serif;
-    font-weight: normal;
-    padding: 20px 10px;
-    text-align: center;
-    text-transform: uppercase;
-    vertical-align: middle;
-    white-space: nowrap;
-}
+                            border-top: medium none;
+                            font-family: Montserrat, Arial, Helvetica, sans-serif;
+                            font-weight: normal;
+                            padding: 20px 10px;
+                            text-align: center;
+                            text-transform: uppercase;
+                            vertical-align: middle;
+                            white-space: nowrap;
+                        }
 .table-content table th,
 .table-content table td {
     border-bottom: 1px solid #e5e5e5;
@@ -661,19 +635,19 @@ a#scrollUp {
     text-transform: uppercase;
 }
 .coupon p {} .coupon input[type=text] {
-    border: 1px solid #e5e5e5;
-    float: left;
-    height: 40px;
-    margin: 0 6px 20px 0;
-    max-width: 100%;
-    padding: 0 0 0 10px;
-    width: 170px;
-}
+                 border: 1px solid #e5e5e5;
+                 float: left;
+                 height: 40px;
+                 margin: 0 6px 20px 0;
+                 max-width: 100%;
+                 padding: 0 0 0 10px;
+                 width: 170px;
+             }
 .coupon input[type=submit] {} .cart_totals {
-    float: left;
-    text-align: right;
-    width: 100%;
-}
+                                  float: left;
+                                  text-align: right;
+                                  width: 100%;
+                              }
 .cart_totals h2 {
     border-bottom: 2px solid #333;
     display: inline-block;
@@ -702,14 +676,14 @@ a#scrollUp {
     vertical-align: top;
 }
 .cart_totals table {} .cart_totals table td .amount {
-    color: #ffae00;
-    float: right;
-    font-size: 13px;
-    font-weight: bold;
-    margin-left: 5px;
-    text-align: right;
-    text-transform: uppercase;
-}
+                          color: #ffae00;
+                          float: right;
+                          font-size: 13px;
+                          font-weight: bold;
+                          margin-left: 5px;
+                          text-align: right;
+                          text-transform: uppercase;
+                      }
 .cart_totals table td ul#shipping_method {
     list-style: outside none none;
     margin: 0;
@@ -728,9 +702,9 @@ a#scrollUp {
     top: 2px;
 }
 .cart_totals table {} a.shipping-calculator-button {
-    font-weight: bold;
-    color: #6f6f6f;
-}
+                          font-weight: bold;
+                          color: #6f6f6f;
+                      }
 a.shipping-calculator-button:hover {
     color: #83CBDC
 }
@@ -741,17 +715,17 @@ a.shipping-calculator-button:hover {
     white-space: nowrap;
 }
 .cart_totals table tr.order-total .amount {} .wc-proceed-to-checkout a {
-    background: #ffae00 none repeat scroll 0 0;
-    color: #fff;
-    display: inline-block;
-    font-size: 14px;
-    font-weight: 700;
-    height: 50px;
-    line-height: 50px;
-    margin-top: 20px;
-    padding: 0 30px;
-    text-transform: none;
-}
+                                                 background: #ffae00 none repeat scroll 0 0;
+                                                 color: #fff;
+                                                 display: inline-block;
+                                                 font-size: 14px;
+                                                 font-weight: 700;
+                                                 height: 50px;
+                                                 line-height: 50px;
+                                                 margin-top: 20px;
+                                                 padding: 0 30px;
+                                                 text-transform: none;
+                                             }
 .wc-proceed-to-checkout a:hover {
     background: #252525;
 }
@@ -760,17 +734,17 @@ a.shipping-calculator-button:hover {
 ============================= */
 
 .coupon-area {} .coupon-accordion {} .coupon-accordion h3 {
-    background-color: #f7f6f7;
-    border-top: 3px solid #ffae00;
-    color: #515151;
-    font-size: 14px;
-    font-weight: 400;
-    list-style: outside none none !important;
-    margin: 0 0 2em !important;
-    padding: 1em 2em 1em 3.5em !important;
-    position: relative;
-    width: auto;
-}
+                                         background-color: #f7f6f7;
+                                         border-top: 3px solid #ffae00;
+                                         color: #515151;
+                                         font-size: 14px;
+                                         font-weight: 400;
+                                         list-style: outside none none !important;
+                                         margin: 0 0 2em !important;
+                                         padding: 1em 2em 1em 3.5em !important;
+                                         position: relative;
+                                         width: auto;
+                                     }
 .coupon-accordion h3::before {
     color: #1e85be;
     content: "\f114";
@@ -795,15 +769,15 @@ p.lost-password a:hover {
     padding: 20px;
 }
 .coupon-info {} .coupon-info p.coupon-text {
-    margin-bottom: 15px
-}
+                    margin-bottom: 15px
+                }
 .coupon-info p {
     margin-bottom: 0
 }
 .coupon-info p.form-row-first {} .coupon-info p.form-row-first label,
-.coupon-info p.form-row-last label {
-    display: block;
-}
+                                 .coupon-info p.form-row-last label {
+                                     display: block;
+                                 }
 .coupon-info p.form-row-first label span.required,
 .coupon-info p.form-row-last label span.required {
     color: red;
@@ -819,9 +793,9 @@ p.lost-password a:hover {
     width: 370px;
 }
 .coupon-info p.form-row-last {} .coupon-info p.form-row input[type="submit"]:hover,
-p.checkout-coupon input[type="submit"]:hover {
-    background: #ffae00 none repeat scroll 0 0;
-}
+                                p.checkout-coupon input[type="submit"]:hover {
+                                    background: #ffae00 none repeat scroll 0 0;
+                                }
 .coupon-info p.form-row input[type="checkbox"] {
     height: inherit;
     position: relative;
@@ -838,10 +812,10 @@ p.lost-password a {
     color: #6f6f6f;
 }
 p.checkout-coupon {} p.checkout-coupon input[type=text] {
-    height: 36px;
-    padding-left: 10px;
-    width: 170px;
-}
+                         height: 36px;
+                         padding-left: 10px;
+                         width: 170px;
+                     }
 p.checkout-coupon input[type="submit"] {
     background: #333 none repeat scroll 0 0;
     border: medium none;
@@ -861,13 +835,13 @@ p.checkout-coupon input[type="submit"] {
     margin-bottom: 30px;
 }
 .checkbox-form {} .checkbox-form h3 {
-    border-bottom: 1px solid #e5e5e5;
-    font-size: 30px;
-    margin: 0 0 20px;
-    padding-bottom: 10px;
-    text-transform: uppercase;
-    width: 100%;
-}
+                      border-bottom: 1px solid #e5e5e5;
+                      font-size: 30px;
+                      margin: 0 0 20px;
+                      padding-bottom: 10px;
+                      text-transform: uppercase;
+                      width: 100%;
+                  }
 .country-select {
     margin-bottom: 30px;
     position: relative;
@@ -906,23 +880,23 @@ p.checkout-coupon input[type="submit"] {
     color: #333;
 }
 .checkout-form-list label span.required {} .checkout-form-list input[type=text],
-.checkout-form-list input[type=password],
-.checkout-form-list input[type=email] {
-    background: #fff none repeat scroll 0 0;
-    border: 1px solid #e5e5e5;
-    border-radius: 0;
-    height: 42px;
-    width: 100%;
-    padding: 0 0 0 10px;
-}
+                                           .checkout-form-list input[type=password],
+                                           .checkout-form-list input[type=email] {
+                                               background: #fff none repeat scroll 0 0;
+                                               border: 1px solid #e5e5e5;
+                                               border-radius: 0;
+                                               height: 42px;
+                                               width: 100%;
+                                               padding: 0 0 0 10px;
+                                           }
 .checkout-form-list {} .checkout-form-list input[type="checkbox"] {
-    display: inline-block;
-    height: inherit;
-    margin-right: 10px;
-    position: relative;
-    top: 2px;
-    width: inherit;
-}
+                           display: inline-block;
+                           height: inherit;
+                           margin-right: 10px;
+                           position: relative;
+                           top: 2px;
+                           width: inherit;
+                       }
 .ship-different-title input {
     height: inherit;
     line-height: normal;
@@ -936,17 +910,17 @@ p.checkout-coupon input[type="submit"] {
     display: inline-block;
 }
 .checkout-form-list input[type=password] {} .create-account {
-    display: none
-}
+                                                display: none
+                                            }
 .ship-different-title {} .ship-different-title h3 label {
-    display: inline-block;
-    margin-right: 20px;
-}
+                             display: inline-block;
+                             margin-right: 20px;
+                         }
 .ship-different-title input {} .order-notes {} .order-notes textarea {
-    height: 90px;
-    padding: 15px;
-    width: 100%
-}
+                                                   height: 90px;
+                                                   padding: 15px;
+                                                   width: 100%
+                                               }
 #ship-box-info {
     display: none
 }
@@ -1007,13 +981,13 @@ p.checkout-coupon input[type="submit"] {
     font-size: 20px;
 }
 .your-order-table table {} .payment-method {
-    margin-top: 40px;
-}
+                               margin-top: 40px;
+                           }
 .payment-accordion {} .payment-accordion h3 {
-    border-bottom: 0 none;
-    margin-bottom: 10px;
-    padding-bottom: 0;
-}
+                          border-bottom: 0 none;
+                          margin-bottom: 10px;
+                          padding-bottom: 0;
+                      }
 .payment-accordion h3 a {
     color: #6f6f6f;
     font-size: 14px;
@@ -1036,34 +1010,34 @@ p.checkout-coupon input[type="submit"] {
     content: "\f056";
 }
 .payment-content {} .payment-content p {
-    font-size: 13px;
-}
+                        font-size: 13px;
+                    }
 .payment-accordion img {
     height: 60px;
     margin-left: 15px;
 }
 .order-button-payment {} .order-button-payment input {
-    background: #ffae00 none repeat scroll 0 0;
-    border: medium none;
-    color: #fff;
-    font-size: 17px;
-    font-weight: 600;
-    height: 50px;
-    margin: 20px 0 0;
-    padding: 0;
-    text-transform: uppercase;
-    transition: all 0.3s ease 0s;
-    width: 100%;
-}
+                             background: #ffae00 none repeat scroll 0 0;
+                             border: medium none;
+                             color: #fff;
+                             font-size: 17px;
+                             font-weight: 600;
+                             height: 50px;
+                             margin: 20px 0 0;
+                             padding: 0;
+                             text-transform: uppercase;
+                             transition: all 0.3s ease 0s;
+                             width: 100%;
+                         }
 .order-button-payment input:hover {
     background: #444
 }
 /*******   9. Login area   ********/
 
 .login-area {} .login-area input {
-    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
-    border: 1px solid #eceff8;
-}
+                   background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+                   border: 1px solid #eceff8;
+               }
 .login-area select {
     background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
     border: 1px solid #eceff8;
@@ -1177,7 +1151,7 @@ label.inline > a {
     position: inherit;
 }
 .elements1 .main-menu {
-   display: table;
+    display: table;
     margin: 0 auto;
 }
 .elements1 .search-block-top {
@@ -1293,10 +1267,10 @@ label.inline > a {
     clear: both;
 }
 .mailchimp-error {
-  color: red;
+    color: red;
 }
 .mailchimp-success {
-  color: green;
+    color: green;
 }
 
 .breadcrumb-bg1 {
@@ -1318,14 +1292,14 @@ label.inline > a {
 
 .container-ms { width: 750px;}
 .container-ms .blog-info h3 a,.container .blog-info h3 a {
-     text-align: center;
-     font-size: 30px;
- }
+    text-align: center;
+    font-size: 30px;
+}
 .container-ms .article  p {
     color: #2f2f2f;
     font-size: 16px;
     margin: 0 0 25px;
- }
+}
 .article img {
     display: block;
     margin: 0 auto 20px;
