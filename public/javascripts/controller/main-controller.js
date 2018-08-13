@@ -1,5 +1,10 @@
 var mainApp = angular.module('mainApp', []);
 
+String.prototype.replaceAll = function (FindText, RepText) {
+    regExp = new RegExp(FindText, "g");
+    return this.replace(regExp, RepText);
+}
+
 mainApp.directive('myPagination', function () {
   return {
     restrict: 'EA',
