@@ -445,7 +445,7 @@ mainApp.controller('articleController', function ($scope, $http, mainService, $s
   function getArticleById(id) {
     mainService.getDocumentById(id, function (res) {
       $scope.article = res.data.data;
-      $scope.article.content =   $scope.article.content.replace('/upload/editor', "http://chenjunyi.liuhuatao.com/upload/editor");
+      $scope.article.content =   $scope.article.content.replaceAll('/upload/editor', "http://chenjunyi.liuhuatao.com/upload/editor");
       $scope.article.content = $sce.trustAsHtml($scope.article.content);
       console.log($scope.article);
     }, function (err) {
