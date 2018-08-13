@@ -1,5 +1,10 @@
 var mainApp = angular.module('mainApp', []);
 
+String.prototype.replaceAll = function (FindText, RepText) {
+    regExp = new RegExp(FindText, "g");
+    return this.replace(regExp, RepText);
+}
+
 mainApp.directive('myPagination', function () {
   return {
     restrict: 'EA',
@@ -549,7 +554,7 @@ mainApp.controller('chubanzhuzuoController', function ($scope, $http, mainServic
     $scope.id = id;
     mainService.getDocumentById(id, function (res) {
       $scope.article = res.data.data;
-      $scope.article.content =   $scope.article.content.replace('/upload/editor', "http://chenjunyi.liuhuatao.com/upload/editor");
+      $scope.article.content =   $scope.article.content.replaceAll('/upload/editor', "http://chenjunyi.liuhuatao.com/upload/editor");
       $scope.article.content = $sce.trustAsHtml($scope.article.content);
       console.log($scope.article);
     }, function (err) {

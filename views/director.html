@@ -20,15 +20,17 @@
 <main>
     <div class="content">
         <!-- Pieces Slider -->
-        <div class="pieces-slider">
+        <div class="pieces-slider ">
             <!-- Each slide with corresponding image and text -->
-            <div class="pieces-slider__slide">
+            <div class="pieces-slider__slide" >
                 <img class="pieces-slider__image" src="img/director/1.jpg" alt="">
-                <h2 class="pieces-slider__text">激情夜上海</h2>
+                <h2 class="pieces-slider__text" >激情夜上海</h2>
+                <a class="pieces-slider__btn" type="button" id="ClickMe1" ><img src="img/director/close.gif"></a>
             </div>
             <div class="pieces-slider__slide">
                 <img class="pieces-slider__image" src="img/director/2.jpg" alt="">
                 <h2 class="pieces-slider__text">激情夜上海</h2>
+                <a class="pieces-slider__btn" type="button" id="ClickMe2" >点击显示弹窗遮罩2</a>
             </div>
             <div class="pieces-slider__slide">
                 <img class="pieces-slider__image" src="img/director/3.jpg" alt="">
@@ -70,7 +72,79 @@
         </div>
     </div>
 </main>
+<div class="cd-popup">
+    <div class="cd-popup-container">
+        <p>几种常见的简洁弹框</p>
+        <div class="cd-buttons">
+            自定义整体容器宽高度及内容，高度可自适应可固定,样式可以定义自己喜欢的样式，这里就不做美观了
+        </div>
+        <a href="#0" class="cd-popup-close">close</a>
+    </div>
+</div>
 
+<!--<div>
+    <button type="button" id="ClickMe1">点击显示弹窗遮罩</button>
+    <button type="button" id="ClickMe2">点击显示弹窗遮罩</button>
+    <button type="button" id="ClickMe3">点击显示弹窗遮罩</button>
+</div>-->
+
+<div id="goodcover"></div>
+
+<div id="code1" class="cc">
+    <div class="close"><a href="javascript:void(0)" class="closebt"><img src="img/director/close.gif"></a></div>
+    <div class="goodtxt">
+        <p>微信扫一扫1111</p>
+        <p>将您的团购分享到朋友圈</p>
+        <p>让更多朋友知道哦~</p>
+    </div>
+    <div class="code-img"> <img id="ewmsrc"  src="images/code.jpg"/></div>
+</div>
+
+<div id="code2" class="cc">
+    <div class="close"><a href="javascript:void(0)" class="closebt"><img src="img/director/close.gif"></a></div>
+    <div class="goodtxt">
+        <p>微信扫一扫222</p>
+        <p>将您的团购分享到朋友圈</p>
+        <p>让更多朋友知道哦~</p>
+    </div>
+    <div class="code-img"> <img id="ewmsrc"  src="images/code.jpg"/></div>
+</div>
+
+<div id="code3" class="cc">
+    <div class="close"><a href="javascript:void(0)" class="closebt"><img src="img/director/close.gif"></a></div>
+    <div class="code-img">
+        <video controls="controls" src="img/director/1.mp4" id="ckplayer_a1" width="900"  ></video>
+    </div>
+</div>
+<script src="/js/vendor/jquery-1.12.0.min.js"></script>
+<script>
+    $(function() {
+        //alert($(window).height());
+        $('#ClickMe1').click(function() {
+            $('#code1').show();
+            $('#goodcover').show();
+            $('#code1').fadeIn();
+        });
+        $('#ClickMe2').click(function() {
+            $('#code2').show();
+            $('#goodcover').show();
+            $('#code2').fadeIn();
+        });
+        $('#ClickMe3').click(function() {
+            $('#code3').show();
+            $('#goodcover').show();
+            $('#code3').fadeIn();
+        });
+        $('.closebt').click(function() {
+            $('.cc').hide();
+            $('#goodcover').hide();
+        });
+        $('#goodcover').click(function() {
+            $('.cc').hide();
+            $('#goodcover').hide();
+        });
+    })
+</script>
 <!-- 导演艺术展示 结束  -->
 <!-- End page content -->
 {% endblock %}

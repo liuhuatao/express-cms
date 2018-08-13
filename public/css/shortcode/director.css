@@ -55,7 +55,6 @@ main {
 /* Make all slides absolutes and hide them */
 .js .pieces-slider__slide {
 	position: absolute;
-	right: 100%;
 }
 
 /* Define image dimensions and also hide them */
@@ -137,3 +136,54 @@ main {
 }
 
 
+
+#ClickMe {
+	width: 200px;
+	height: 30px;
+	border: 1px solid #C40000;
+	background-color: #000;
+	color: #FFF;
+	margin:0 auto;
+}
+#goodcover {
+	display: none;
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 133%;
+	background-color: black;
+	z-index: 1001;
+	-moz-opacity: 0.8;
+	opacity: 0.50;
+	filter: alpha(opacity=80);
+}
+.cc{
+	width: 920px;
+	height: 600px;
+	background-color: #fff;
+	padding: 10px;
+	position: absolute;
+	display: none;
+	left: 50%;
+	top: 50%;
+	margin: -300px -450px;
+	z-index: 1002;
+}
+
+.close {
+	float: right;
+	margin: 15px;
+}
+#closebt img {
+	width: 20px;
+}
+
+.pieces-slider__slide button {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 200px;
+	height: 200px;
+	z-index: 100;
+}

@@ -1630,30 +1630,32 @@
     }
 }
 /* page6 */
-.page6 {
+.page6,.page7 {
     background: #000;
     background-size: cover;
 }
 
-.page6 .index_inner {
+.page6 .index_inner,.page7 .index_inner {
     display: block;
 }
 
-.page6 .index_inner .index_box {
+.page6 .index_inner .index_box,.page7 .index_inner .index_box {
     width: 100%;
     height: 100%;
     display: block;
     overflow: hidden;
 }
 
-.page6 .index_inner .item_box h2 {
+.page6 .index_inner .item_box h2,.page7 .index_inner .item_box h2 {
     margin-top: 180px;
 }
 
-.page6 .index_inner .container-fluid {
+.page6 .index_inner .container-fluid,.page7 .index_inner .container-fluid {
+    padding: 0;
+} {
     padding: 0;
 }
-.page7 {
+.page8 {
     background: url(../../img/index/contact.jpg) center center no-repeat;
     background-size: cover;
 }
