@@ -569,6 +569,7 @@ mainApp.controller('contactController', function ($scope, $http, mainService, $s
   $scope.name = '';
   $scope.email = '';
   $scope.content = '';
+  $scope.ss='';
 
   function sendMail() {
     window.location.href = 'mailto:jbcusa@qq.com?subject=' +  $scope.title + ' 姓名:' + $scope.name + ' 邮箱：' + $scope.email+ '&body=' + $scope.content
