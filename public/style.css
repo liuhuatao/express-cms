@@ -1,3 +1,4 @@
+
 .btn {
     background-color: #444;
     border: 0 none;
@@ -729,9 +730,7 @@ a.shipping-calculator-button:hover {
 .wc-proceed-to-checkout a:hover {
     background: #252525;
 }
-/*===========================
-    8. Checkout page
-============================= */
+
 
 .coupon-area {} .coupon-accordion {} .coupon-accordion h3 {
                                          background-color: #f7f6f7;
