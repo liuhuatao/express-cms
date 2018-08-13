@@ -2595,9 +2595,7 @@ button:disabled,
     width: 67.5%;
 }
 
-.panel.small .span-7, .panel.medium .span-7, .panel.large .span-7 {
-    width: 70%;
-}
+
 
 .panel.small .span-7-25, .panel.medium .span-7-25, .panel.large .span-7-25 {
     width: 72.5%;
@@ -3346,7 +3344,7 @@ button:disabled,
     -webkit-justify-content: center;
     -ms-justify-content: center;
     justify-content: center;
-    padding: 3.5rem 3.5rem 2rem 3.5rem ;
+    padding: 16rem 3.5rem 2rem 3.5rem ;
 }
 
 .panel.spotlight .image {
