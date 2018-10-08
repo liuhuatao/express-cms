@@ -1338,8 +1338,9 @@ label.inline > a {
 }
 .modal-img button {
     position: absolute;
-    right: -42px;
-    top: 0;
+    right: -58px;
+    top: -15px;
+    opacity: 1;
     background: #fff;
     padding: 10px 15px;
 }
