@@ -654,11 +654,12 @@ text-transform: uppercase;}
 }
 .books_bg ul li {
     float: left;
-    width: 250px;
-    height: 310px;
+    width: 350px;
+    height: 434px;
+  margin-left: 335px;
 }
 .books_bg ul li a {
     display: block;
-    width: 250px;
-    height: 310px;
+    width: 350px;
+    height: 434px;
 }
