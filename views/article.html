@@ -25,8 +25,8 @@
                         <div class="blog-info article">
                             <h3><a href="javasript:;" ng-bind="article.title"></a></h3>
                             <div class="blog-meta blog-large">
-                                <span><i class="fa fa-clock-o" aria-hidden="true"></i> {% raw %}{{article.create_time|date:'yyyy.MM.dd'}}{% endraw %}</span>
-                                <span class="ml-15"><i class="fa fa-user-circle-o" aria-hidden="true"></i>{% raw %}{{article.keyname?article.keyname:'admin'}}{% endraw %}</span>
+                                <!--<span><i class="fa fa-clock-o" aria-hidden="true"></i> {% raw %}{{article.create_time|date:'yyyy.MM.dd'}}{% endraw %}</span>-->
+                                <span><i class="fa fa-user-circle-o" aria-hidden="true"></i>{% raw %}{{article.keyname?article.keyname:'admin'}}{% endraw %}</span>
                             </div>
                             <div ng-bind-html="article.content">
 
