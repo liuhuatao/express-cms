@@ -1647,7 +1647,7 @@
 }
 
 .page6 .index_inner .item_box h2,.page7 .index_inner .item_box h2 {
-    margin-top: 180px;
+    margin-top: 160px;
 }
 
 .page6 .index_inner .container-fluid,.page7 .index_inner .container-fluid {
@@ -1937,7 +1937,7 @@
 
 .item_box h2,
 .item_box h2 a {
-    margin-top: 50px;
+    margin-top: 120px;
     font-size: 36px;
     font-weight: 700;
     color: #fff;
@@ -2006,7 +2006,7 @@
 }
 
 .item_bd {
-    margin-top: 35px;
+    margin-top: 20px;
 }
 
 .index_inner {
