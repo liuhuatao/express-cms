@@ -34,7 +34,7 @@
     var textOptions = {
         color: 'white',
         backgroundColor: '#5104ab',
-        fontSize: function() { return windowWidth > 720 ? 50 : 30; },
+        fontSize: function() { return windowWidth > 720 ? 42 : 30; },
         padding: '15 20 10 20',
         angle: -45,
         piecesSpacing: 2,
