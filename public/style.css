@@ -1096,12 +1096,12 @@ label.inline > a {
 .contact-form input[type="text"],
 .contact-form input[type="email"] {
     background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
-    border: 1px solid #eceff8;
+    border: 1px solid #c5c5c5;
     margin-bottom: 16px;
 }
 .contact-form textarea {
     background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
-    border: 1px solid #eceff8;
+    border: 1px solid #c5c5c5;
 }
 .contact-form input[type="submit"] {
     background: #252525 none repeat scroll 0 0;
@@ -1120,7 +1120,7 @@ label.inline > a {
 .contact-info h3,
 .contact-form h3 {
     border-bottom: 2px solid #e8e8e9 !important;
-    font-size: 16px;
+    font-size: 24px;
     margin-bottom: 20px;
     padding-bottom: 8px;
     text-transform: uppercase;
@@ -1129,7 +1129,7 @@ label.inline > a {
 .contact-info ul li {
     border-bottom: 1px solid #e8e8e9;
     float: left;
-    font-size: 13px;
+    font-size: 16px;
     line-height: 40px;
     list-style: outside none none;
     margin: 0;
