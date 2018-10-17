@@ -240,18 +240,50 @@
                     <h2><a href="about.html">视频欣赏</a></h2>
                     <div class="testimonial-area">
                         <div class="container">
-                            <ul>
-                                <li>
-                                    <a>
-                                        <video controls="controls" src="img/20180711114115.mp4" width="900" height="600" autoplay="autoplay"></video>
-                                    </a>
-                                </li>
-                            </ul>
+                            <div class="vido-list">
+                                <ul>
+                                    <li>
+                                        <a class="onlick onlick1">
+                                            <span class="bofang"></span>
+                                            <img src="img/director/1.jpg">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="onlick onlick2">
+                                            <span class="bofang"></span>
+                                            <img src="img/director/2.jpg">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="onlick onlick3">
+                                            <span class="bofang"></span>
+                                            <img src="img/director/3.jpg">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="theme-popover-mask"></div>
+                            <div class="videobox" id="video1">
+                                <a class="close"><span aria-hidden="true">x</span></a>
+                                <video controls="controls" src="https://liuhuatao123456.oss-cn-hangzhou.aliyuncs.com/video/11.mp4"  width="900" height="600"></video>
+                            </div>
+                            <div class="videobox" id="video2">
+                                <a class="close"><span aria-hidden="true">x</span></a>
+                                <video controls="controls" src="https://liuhuatao123456.oss-cn-hangzhou.aliyuncs.com/video/11.mp4" width="900" height="600"></video>
+                            </div>
+                            <div class="videobox" id="video3">
+                                <a class="close"><span aria-hidden="true">x</span></a>
+                                <video controls="controls" src="https://liuhuatao123456.oss-cn-hangzhou.aliyuncs.com/video/11.mp4" width="900" height="600"></video>
+                            </div>
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+
         <!-- 第6屏 衍生品 -->
         <div class="page page7">
             <div class="index_inner">
@@ -439,6 +471,33 @@
         //jQuery('.goog-logo-link').css('display', 'none');
         //jQuery('.goog-te-gadget').css('font-size', '0');
     }
+</script>
+
+<script>
+
+    $(document).ready(function($){
+
+        $('.onlick1').click(function(){
+            $('.theme-popover-mask').show();
+            $('.theme-popover-mask').height($(document).height());
+            $('#video1').fadeIn(200);
+        });
+        $('.onlick2').click(function(){
+            $('.theme-popover-mask').show();
+            $('.theme-popover-mask').height($(document).height());
+            $('#video2').fadeIn(200);
+        });
+        $('.onlick3').click(function(){
+            $('.theme-popover-mask').show();
+            $('.theme-popover-mask').height($(document).height());
+            $('#video3').fadeIn(200);
+        });
+        $('.close').click(function(){
+            $('.theme-popover-mask').hide();
+            $('.videobox').fadeOut(200);
+        })
+
+    });
 </script>
 <script
         src="/js/google-translate.js"></script>
