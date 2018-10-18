@@ -1,0 +1,536 @@
+
+<html lang="zh-CN"  ng-app="mainApp">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>陈俊毅艺术世界</title>
+    <base target="_blank">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- favicon
+    ============================================ -->
+    <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.png">
+
+    <!-- All css files are included here. -->
+    <!-- Bootstrap framework main css -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <!-- This core.css file contents all plugings css file. -->
+    <link rel="stylesheet" href="/css/core.css">
+    <!-- Theme shortcodes/elements style -->
+    <link rel="stylesheet" href="/css/shortcode/shortcodes.css">
+    <!-- Index style -->
+    <link rel="stylesheet" href="/css/shortcode/index.css">
+
+    <!-- Modernizr JS -->
+    <script src="/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" ng-controller="bodyController">
+<!-- header start -->
+<header class="intelligent-header header-black header-area elements1">
+    <div class="header-black-area header-middle">
+        {% include "layouts/header.html" %}
+    </div>
+</header>
+<!-- header end -->
+<div id="wrap" class="wrapper">
+    <div class="pages" id="pages">
+        <!-- 第1屏  banner-->
+        <div class="page page1">
+            <!--<audio controls="controls" autoplay="autoplay">
+                <source src="img/song.mp3" type="audio/mpeg" />
+                Your browser does not support the audio element.
+            </audio>-->
+            <div id="slide" class="slide">
+                <div>
+                    <div class="bgs" style="background-image: url(img/slider/1.jpg);"></div>
+                    <div class="index_inner">
+                        <div class="index_box solgan">
+                            <div class="container">
+                                <!--<h2>欢迎走进 <span>陈俊毅艺术世界！</span></h2>-->
+                                <img src="img/index/01.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="bgs" style="background-image: url(img/slider/2.jpg);"></div>
+                    <div class="index_inner">
+                        <div class="index_box solgan">
+                            <div class="container">
+                                <!--<h2>生活因艺术而改变!</h2>-->
+                                <img src="img/index/02.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="bgs" style="background-image: url(img/slider/3.jpg);"></div>
+                    <div class="index_inner">
+                        <div class="index_box solgan">
+                            <div class="container">
+                                <!--<h2>生活因艺术而改变!</h2>-->
+                                <img src="img/index/01.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="arrow"><span></span><i class="fa fa-chevron-down"></i></div>
+        </div>
+        <!-- 第2屏 艺术领域-->
+        <div class="page page2">
+            <div class="index_inner">
+                <div class="index_box item_box">
+                    <div class="container">
+                        <div class="about_box item_bd">
+                            <div class="card">
+                                <a href="/works.html?cid=130">
+                                    <div class="cont">
+                                        <div class="card_image" style="background-image: url(img/index/about_1.png);"></div>
+                                        <div class="card_detail">
+                                                <span class="text">
+                                                    <h3>艺术作品</h3>
+                                                    <p class="text-r"><span class="more">了解更多 &gt;</span></p>
+                                                </span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card">
+                                <a href="director.html">
+                                    <div class="cont">
+                                        <div class="card_image" style="background-image: url(img/index/about_2.png);"></div>
+                                        <div class="card_detail">
+                                                <span class="text">
+                                                    <h3>导演艺术</h3>
+                                                    <p class="text-r"><span class="more">了解更多 &gt;</span></p>
+                                                </span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card">
+                                <a ng-href="{% raw %}{{'derivative.html?cid='+categoryList[4].children[0].id}}{% endraw %}">
+                                    <div class="cont">
+                                        <div class="card_image" style="background-image: url(img/index/about_3.png);"></div>
+                                        <div class="card_detail">
+											<span class="text">
+												<h3>文创产品</h3>
+												<p class="text-r"><span class="more">了解更多 &gt;</span></p>
+											</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="arrow"><span></span><i class="fa fa-chevron-down"></i></div>
+        </div>
+        <!-- 第3屏 作品欣赏 -->
+        <div class="page page3">
+            <div class="index_inner">
+                <div class="index_box item_box">
+                    <h2><a href="#">作品欣赏</a></h2>
+                    <div class="container">
+                        <div class="case_box item_bd">
+                            <div class="case_slide">
+
+                                <div id="case_slide" data-json='{"data":[
+                                         {"url":"works.html?cid=130","img":"img/index/s1.jpg","type":"陈俊毅艺术世界","name":"油画作品"}
+                                        ,{"url":"works.html?cid=130","img":"img/index/s2.jpg","type":"陈俊毅艺术世界","name":"油画作品"}
+                                        ,{"url":"works.html?cid=130","img":"img/index/s3.jpg","type":"陈俊毅艺术世界","name":"油画作品"}
+                                        ,{"url":"works.html?cid=130","img":"img/index/s4.jpg","type":"陈俊毅艺术世界","name":"油画作品"}
+                                        ,{"url":"works.html?cid=130","img":"img/index/s4.jpg","type":"陈俊毅艺术世界","name":"油画作品"}
+                                        ,{"url":"works.html?cid=130","img":"img/index/s5.jpg","type":"陈俊毅艺术世界","name":"油画作品"}
+                                        ,{"url":"works.html?cid=130","img":"img/index/s6.jpg","type":"陈俊毅艺术世界","name":"油画作品"}
+                                        ,{"url":"works.html?cid=130","img":"img/index/s7.jpg","type":"陈俊毅艺术世界","name":"油画作品"}
+                                        ,{"url":"works.html?cid=130","img":"img/index/s7.jpg","type":"陈俊毅艺术世界","name":"油画作品"}
+                                        ,{"url":"works.html?cid=130","img":"img/index/s8.jpg","type":"陈俊毅艺术世界","name":"油画作品"}
+                                        ,{"url":"works.html?cid=130","img":"img/index/s9.jpg","type":"陈俊毅艺术世界","name":"油画作品"}
+                                    ]}'>
+                                </div>
+                            </div>
+                            <div class="arr">
+                                <div class="case_arrow_l"><i class="fa fa-angle-left"></i></div>
+                                <div class="case_arrow_r"><i class="fa fa-angle-right"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    <h5><a class="button medium button-black mb-20" ng-href="{% raw %}{{'works.html?cid='+categoryList[0].children[0].id}}{% endraw %}"><span>查看更多</span></a></h5>
+                </div>
+            </div>
+            <div class="arrow"><span></span><i class="fa fa-chevron-down"></i></div>
+            =
+        </div>
+        <!-- 第4屏  新闻动态-->
+        <div class="page page4">
+            <div class="index_inner">
+                <div class="index_box item_box">
+                    <h2><a href="news.html">新闻动态</a></h2>
+                    <div class="container mt-50">
+                        <div class="row">
+                            <div class="blog-active owl-carousel owl-theme owl-loaded">
+                                <div class="owl-stage-outer">
+                                    <div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: 0s; width: 2340px;">
+                                        <div class="owl-item active" style="width: 585px; margin-right: 0px;" ng-repeat="item in list.data">
+                                            <div class="col-lg-12">
+                                                <div class="blog-wrapper">
+                                                    <div class="blog-img">
+                                                        <a ng-href="{% raw %}{{'/article.html?id='+item.id}}{% endraw %}">
+                                                            <img ng-src="{% raw %}{{item.imgurl[0]}}{% endraw %}" style="height: 330px" alt="">
+                                                        </a>
+                                                    </div>
+                                                    <div class="blog-info">
+                                                        <h3><a ng-href="{% raw %}{{'/article.html?id='+item.id}}{% endraw %}" ng-bind="item.title"></a></h3>
+                                                        <div class="blog-meta">
+                                                            <span class="f-left">{% raw %}{{article.create_time|date:'yyyy.MM.dd'}}{% endraw %}</span>
+                                                            <span class="f-right"><a ng-href="{% raw %}{{'/article.html?id='+item.id}}{% endraw %}">阅读全文 </a></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h5><a class="button medium button-black mb-20" ng-href="{% raw %}{{'news.html?cid='+categoryList[3].children[0].id}}{% endraw %}"><span>查看更多</span></a></h5>
+                </div>
+            </div>
+            <div class="arrow"><span></span><i class="fa fa-chevron-down"></i></div>
+        </div>
+        <!-- 第5屏 简介 -->
+        <div class="page page5">
+            <div class="index_inner">
+                <div class="index_box item_box">
+                    <h2><a href="about.html">简介</a></h2>
+                    <div class="testimonial-area mt-40">
+                        <div class="container">
+                            <div class="testimonial-active">
+                                <div class="single-testimonial text-center">
+                                    <div class="test-img">
+                                        <img src="img/test/1.jpg" alt="" />
+                                    </div>
+                                    <div class="testimonial-test">
+                                        <p>出生于上海市。旅美油画家，艺术家，舞台秀导演<br/>
+                                            70年代初，考入文艺团体从事舞台美术设计，在上海歌剧院及南京艺术学院学习舞台美术，并随名师学习声乐、小提琴。油画启蒙曾师从著名油画大家颜文樑。<br/>
+                                            93年由上海美术馆主办“陈俊毅大型个人油画展”， 在上海美术馆展出作品108件。 95年， 上海的拍卖公司举办“陈俊毅个人油画专场拍卖会”。
+                                            93--95年期间，上海电视台《诗与画》栏目及《上海滩名人专访》栏目两度拍摄并向海内外播放“陈俊毅电视专题片”。<br/>
+                                            95年受邀赴美，并定居美国，创办艺术沙龙。 98年受邀参加“美国名家艺术走廊”十大西画名家联展。在美国，艺术成就被写成文学报道——《特写---美国华裔精英》一书，90年代后期，作品被收入《世界华人美术家年鉴》，本人被授予“世界华人美术名家”称号，同时入选《世界华人美术名家画集》和《美国华裔名人年鉴》。 2000年获美国加州橙郡郡政府授予“杰出成就荣誉市民”。<br/>
+                                            2007年，策划、导演了大型歌舞秀《激情夜上海》，首次将油画艺术与歌舞艺术融合于舞台，演于上海东方艺术中心和上海美琪大戏院等剧院。<br/>
+                                            2015年，策划、总导演了大型城市歌舞秀《激情夜上海》（升级版）。</p>
+                                        <h5><a class="button medium button-black mb-20" href="about.html"><span>查看更多</span></a></h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="page page6">
+            <div class="index_inner">
+                <div class="index_box item_box">
+                    <h2><a href="about.html">视频欣赏</a></h2>
+                    <div class="testimonial-area">
+                        <div class="container">
+                            <div class="vido-list">
+                                <ul>
+                                    <li>
+                                        <a class="onlick onlick1">
+                                            <span class="bofang"></span>
+                                            <img src="img/director/1.jpg">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="onlick onlick2">
+                                            <span class="bofang"></span>
+                                            <img src="img/director/2.jpg">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="onlick onlick3">
+                                            <span class="bofang"></span>
+                                            <img src="img/director/3.jpg">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="theme-popover-mask"></div>
+                            <div class="videobox" id="video1">
+                                <a class="close" onclick="player.videoPause()"><span aria-hidden="true">x</span></a>
+                                <video controls="controls" src="https://liuhuatao123456.oss-cn-hangzhou.aliyuncs.com/video/11.mp4"  width="900" height="600"></video>
+                            </div>
+                            <div class="videobox" id="video2">
+                                <a class="close"><span aria-hidden="true">x</span></a>
+                                <video controls="controls" src="https://liuhuatao123456.oss-cn-hangzhou.aliyuncs.com/video/11.mp4" width="900" height="600"></video>
+                            </div>
+                            <div class="videobox" id="video3">
+                                <a class="close"><span aria-hidden="true">x</span></a>
+                                <video controls="controls" src="https://liuhuatao123456.oss-cn-hangzhou.aliyuncs.com/video/11.mp4" width="900" height="600"></video>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- 第6屏 衍生品 -->
+        <div class="page page7">
+            <div class="index_inner">
+                <div class="index_box item_box">
+                    <h2><a href="derivative.html">衍生品</a></h2>
+                    <div class="container mt-50">
+                        <div class="row">
+                            <div class="col-md-3 col-sm-3">
+                                <div class="banner-style">
+                                    <a ng-href="/derivative.html?cid=153">
+                                        <img src="img/derivative/dress-01.jpg" alt="" />
+                                        <span class="text">
+                                                <span class="text1">
+                                                    <span>服饰</span>
+                                                </span>
+                                                <span class="text2">立即查看</span>
+                                            </span>
+                                    </a>
+                                </div>
+                                <div class="banner-style banner-sm mt-30">
+                                    <a ng-href="{% raw %}{{'derivative.html?cid='+categoryList[4].children[0].id}}{% endraw %}">
+                                        <img src="img/derivative/plate-01.jpg" alt="" />
+                                        <span class="text">
+                                                <span class="text1">
+                                                    <span>摆件</span>
+                                                </span>
+                                                <span class="text2">立即查看</span>
+                                            </span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-3">
+                                <div class="banner-style banner-sm">
+                                    <a ng-href="{% raw %}{{'derivative.html?cid='+categoryList[4].children[0].id}}{% endraw %}">
+                                        <img src="img/derivative/decoration-01.jpg" alt="" />
+                                        <span class="text">
+                                                <span class="text1">
+                                                    <span>摆件</span>
+                                                </span>
+                                                <span class="text2">立即查看</span>
+                                            </span>
+                                    </a>
+                                </div>
+                                <div class="banner-style  mt-30">
+                                    <a ng-href="/derivative.html?cid=153">
+                                        <img src="img/derivative/furniture-01.jpg" alt="" />
+                                        <span class="text">
+                                                <span class="text1">
+                                                    <span>服饰</span>
+                                                </span>
+                                                <span class="text2">立即查看</span>
+                                            </span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-3">
+                                <div class="banner-style">
+                                    <a ng-href="/derivative.html?cid=153">
+                                        <img src="img/derivative/carpet-01.jpg" alt="" />
+                                        <span class="text">
+                                                <span class="text1">
+                                                    <span>服饰</span>
+                                                </span>
+                                                <span class="text2">立即查看</span>
+                                            </span>
+                                    </a>
+                                </div>
+                                <div class="banner-style mt-30">
+                                    <a ng-href="/derivative.html?cid=153">
+                                        <img src="img/derivative/tapestry-01.jpg" alt="" />
+                                        <span class="text">
+                                                <span class="text1">
+                                                    <span>服饰</span>
+                                                </span>
+                                                <span class="text2">立即查看</span>
+                                            </span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-3">
+                                <div class="banner-style banner-sm">
+                                    <a ng-href="/derivative.html?cid=153">
+                                        <img src="img/derivative/bag-01.jpg" alt="" />
+                                        <span class="text">
+                                                <span class="text1">
+                                                    <span>服饰</span>
+                                                </span>
+                                                <span class="text2">立即查看</span>
+                                            </span>
+                                    </a>
+                                </div>
+                                <div class="banner-style  mt-30">
+                                    <a ng-href="/derivative.html?cid=153">
+                                        <img src="img/derivative/ornaments-01.jpg" alt="" />
+                                        <span class="text">
+                                                <span class="text1">
+                                                    <span>配饰</span>
+                                                </span>
+                                                <span class="text2">立即查看</span>
+                                            </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 第7屏 联系我们 -->
+        <div class="page page8">
+            <div class="index_inner">
+                <div class="index_box item_box">
+                    <h2><a href="about.html">联系我们</a></h2>
+                    <ul class="mt-30">
+                        <li>
+                            <i class="fa fa-weixin"></i> <strong>微信公众号</strong>
+                            搜索“陈俊毅艺术世界”或扫下面二维码关注公众号 ↓ <i class="fa fa-long-arrow-down"></i>
+                        </li>
+                        <li>
+                            <img src="img/erweima.jpg" alt="" style="display:block;margin: 10px auto;">
+                        </li>
+                        <li>
+                            <i class="fa fa-envelope"></i> <strong>Email</strong>
+                            <a href="#">jbcusa@qq.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="nav_index" class="nav_index">
+    <div>
+        <span class="active"></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</div>
+<!-- jquery latest version -->
+<script src="/js/vendor/jquery-1.12.0.min.js"></script>
+<!-- Bootstrap framework js -->
+<script src="/js/bootstrap.min.js"></script>
+<!-- ajax-mail js -->
+<script src="/js/ajax-mail.js"></script>
+<!-- owl.carousel js -->
+<script src="/js/owl.carousel.min.js"></script>
+<!-- jquery.nivo.slider js -->
+<script src="/js/jquery.nivo.slider.pack.js"></script>
+<!-- All js plugins included in this file. -->
+<script src="/js/plugins.js"></script>
+
+
+<script src="/js/verder.min.js"></script>
+<script src="/js/index.js"></script>
+
+<script src="/js/angularjs/angular.js"></script>
+<script src="/javascripts/controller/main-controller.js"></script>
+<script>
+    var router = '{{router}}';
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+            {
+                pageLanguage: 'cn',
+                includedLanguages: 'en,zh-CN'
+            },
+            'google_translate_element'
+        );
+        /*
+            To remove the "powered by google",
+            uncomment one of the following code blocks.
+            NB: This breaks Google's Attribution Requirements:
+            https://developers.google.com/translate/v2/attribution#attribution-and-logos
+        */
+        // Native (but only works in browsers that support query selector)
+        //if(typeof(document.querySelector) == 'function') {
+        //    document.querySelector('.goog-logo-link').setAttribute('style', 'display: none');
+        //    document.querySelector('.goog-te-gadget').setAttribute('style', 'font-size: 0');
+        //}
+        // If you have jQuery - works cross-browser - uncomment this
+        //jQuery('.goog-logo-link').css('display', 'none');
+        //jQuery('.goog-te-gadget').css('font-size', '0');
+    }
+</script>
+<script>
+    var player = new ckplayer(videoObject);
+    function loadedHandler() {
+        player.addListener('error', errorHandler); //监听视频加载出错
+        player.addListener('loadedmetadata', loadedMetaDataHandler); //监听元数据
+        player.addListener('duration', durationHandler); //监听播放时间
+        player.addListener('time', timeHandler); //监听播放时间
+        player.addListener('play', playHandler); //监听暂停播放
+        player.addListener('pause', pauseHandler); //监听暂停播放
+        player.addListener('buffer', bufferHandler); //监听缓冲状态
+        player.addListener('seek', seekHandler); //监听跳转播放完成
+        player.addListener('seekTime', seekTimeHandler); //监听跳转播放完成
+        player.addListener('volume', volumeChangeHandler); //监听音量改变
+        player.addListener('full', fullHandler); //监听全屏/非全屏切换
+        player.addListener('ended', endedHandler); //监听播放结束
+        player.addListener('screenshot', screenshotHandler); //监听截图功能
+        player.addListener('mouse', mouseHandler); //监听鼠标坐标
+        player.addListener('frontAd', frontAdHandler); //监听前置广告的动作
+        player.addListener('wheel', wheelHandler); //监听视频放大缩小
+        player.addListener('controlBar', controlBarHandler); //监听控制栏显示隐藏事件
+        player.addListener('clickEvent', clickEventHandler); //监听点击事件
+        player.addListener('definitionChange', definitionChangeHandler); //监听清晰度切换事件
+        player.addListener('speed', speedHandler); //监听加载速度
+    }
+    function pauseHandler() {
+    //player.animatePause();//暂停所有弹幕
+    changeText('.playstate', getHtml('.playstate') + ' 暂停');
+    loadedMetaDataHandler();
+    }
+</script>
+<script>
+
+    $(document).ready(function($){
+
+        $('.onlick1').click(function(){
+            $('.theme-popover-mask').show();
+            $('.theme-popover-mask').height($(document).height());
+            $('#video1').fadeIn(200);
+        });
+        $('.onlick2').click(function(){
+            $('.theme-popover-mask').show();
+            $('.theme-popover-mask').height($(document).height());
+            $('#video2').fadeIn(200);
+        });
+        $('.onlick3').click(function(){
+            $('.theme-popover-mask').show();
+            $('.theme-popover-mask').height($(document).height());
+            $('#video3').fadeIn(200);
+        });
+        $('.close').click(function(){
+            $('.theme-popover-mask').hide();
+            $('.videobox').fadeOut(200);
+        })
+
+    });
+</script>
+<script
+        src="/js/google-translate.js"></script>
+</body>
+
+</html>
