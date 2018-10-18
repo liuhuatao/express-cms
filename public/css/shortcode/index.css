@@ -2738,27 +2738,33 @@ div.zoomMask{position:absolute;background:url("../../img/mask.png") repeat scrol
 
 .vido-list ul li {
     float: left;
-    width: 370px;
-    height: 280px;
-    margin-right: 10px;
+    width: 350px;
+    height: 250px;
+    margin-right: 45px;
     margin-bottom: 10px;
+}
+.vido-list ul li:last-child {
+    margin-right: 0;
 }
 .vido-list ul li a .bofang{
     position: absolute;
     width: 120px;
     height: 78px;
-    margin: 100px 124px;
-    background: url("../../img/director/bofang.png");
+    margin: 92px 113px;
+    background: url("../../img/director/bofang.png")
 }
 .vido-list ul li a {
     display: inline-block;
-    width: 370px;
-    height: 280px;
+    width: 350px;
+    height: 250px;
     cursor: pointer;
 }
+.vido-list ul li a img:hover{
+    border: 5px solid #FFAE00;
+}
 .vido-list ul li a img {
-    width: 370px;
-    height: 280px;
+    width: 350px;
+    height: 250px;
 }
 .theme-popover-mask{
     z-index:9;
