@@ -270,11 +270,11 @@
                             </div>
                             <div class="videobox" id="video2">
                                 <a class="close"><span aria-hidden="true">x</span></a>
-                                <video controls="controls" id="video-js2" src="https://liuhuatao123456.oss-cn-hangzhou.aliyuncs.com/video/11.mp4" width="900" height="600"></video>
+                                <video controls="controls" id="video-js2" src="https://liuhuatao123456.oss-cn-hangzhou.aliyuncs.com/video/12.mp4" width="900" height="600"></video>
                             </div>
                             <div class="videobox" id="video3">
                                 <a class="close"><span aria-hidden="true">x</span></a>
-                                <video controls="controls" id="video-js3" src="https://liuhuatao123456.oss-cn-hangzhou.aliyuncs.com/video/11.mp4" width="900" height="600"></video>
+                                <video controls="controls" id="video-js3" src="https://liuhuatao123456.oss-cn-hangzhou.aliyuncs.com/video/13.mp4" width="900" height="600"></video>
                             </div>
 
                         </div>
@@ -473,36 +473,7 @@
         //jQuery('.goog-te-gadget').css('font-size', '0');
     }
 </script>
-<script>
-    var player = new ckplayer(videoObject);
-    function loadedHandler() {
-        player.addListener('error', errorHandler); //监听视频加载出错
-        player.addListener('loadedmetadata', loadedMetaDataHandler); //监听元数据
-        player.addListener('duration', durationHandler); //监听播放时间
-        player.addListener('time', timeHandler); //监听播放时间
-        player.addListener('play', playHandler); //监听暂停播放
-        player.addListener('pause', pauseHandler); //监听暂停播放
-        player.addListener('buffer', bufferHandler); //监听缓冲状态
-        player.addListener('seek', seekHandler); //监听跳转播放完成
-        player.addListener('seekTime', seekTimeHandler); //监听跳转播放完成
-        player.addListener('volume', volumeChangeHandler); //监听音量改变
-        player.addListener('full', fullHandler); //监听全屏/非全屏切换
-        player.addListener('ended', endedHandler); //监听播放结束
-        player.addListener('screenshot', screenshotHandler); //监听截图功能
-        player.addListener('mouse', mouseHandler); //监听鼠标坐标
-        player.addListener('frontAd', frontAdHandler); //监听前置广告的动作
-        player.addListener('wheel', wheelHandler); //监听视频放大缩小
-        player.addListener('controlBar', controlBarHandler); //监听控制栏显示隐藏事件
-        player.addListener('clickEvent', clickEventHandler); //监听点击事件
-        player.addListener('definitionChange', definitionChangeHandler); //监听清晰度切换事件
-        player.addListener('speed', speedHandler); //监听加载速度
-    }
-    function pauseHandler() {
-    //player.animatePause();//暂停所有弹幕
-    changeText('.playstate', getHtml('.playstate') + ' 暂停');
-    loadedMetaDataHandler();
-    }
-</script>
+
 <script>
 
     $(document).ready(function($){
