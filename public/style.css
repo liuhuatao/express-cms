@@ -1376,6 +1376,7 @@ label.inline > a {
 .sidebar {
     min-width: 368px;
     max-width: 368px;
+    margin-bottom: 30px;
 }
 .sidebar-list {
     padding: 30px 20px;
@@ -1411,7 +1412,7 @@ label.inline > a {
     background: url("img/books/bg2.jpg") no-repeat bottom;
 }
 .sidebar-img img {
-    top: 25px;
-    margin-left: 60px;
+    margin-left: 43px;
+    width: 271px;
     position: absolute;
 }
