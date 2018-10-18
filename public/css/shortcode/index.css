@@ -2767,7 +2767,7 @@ div.zoomMask{position:absolute;background:url("../../img/mask.png") repeat scrol
     height: 250px;
 }
 .theme-popover-mask{
-    z-index:9;
+    z-index:1000;
     position:absolute;
     left:0;
     top:0;
@@ -2780,7 +2780,7 @@ div.zoomMask{position:absolute;background:url("../../img/mask.png") repeat scrol
     display:none;
 }
 .videobox {
-    z-index: 10;
+    z-index: 1001;
     display: none;
     position: fixed;
     top: 50%;
@@ -2791,8 +2791,9 @@ div.zoomMask{position:absolute;background:url("../../img/mask.png") repeat scrol
 }
 .videobox .close {
     position: absolute;
-    right: -158px;
-    top: 34px;
+    right: -157px;
+    top: -15px;
     background: #fff;
     padding: 10px 15px;
+    z-index: 1001;
 }
