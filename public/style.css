@@ -1354,7 +1354,7 @@ label.inline > a {
     padding: 20px 10px;
 }
 .research-list:hover {
-    box-shadow: 0 0 5px 0 rgba(225,174,0,.3);
+    border: 1px solid #FFAE00;
 }
 .b-bg-10 {
     width: 100%;
