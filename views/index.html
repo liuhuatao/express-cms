@@ -266,15 +266,15 @@
                             <div class="theme-popover-mask"></div>
                             <div class="videobox" id="video1">
                                 <a class="close"><span aria-hidden="true">x</span></a>
-                                <video controls="controls" src="https://liuhuatao123456.oss-cn-hangzhou.aliyuncs.com/video/11.mp4"  width="900" height="600"></video>
+                                <video controls="controls" id="video-js1" src="https://liuhuatao123456.oss-cn-hangzhou.aliyuncs.com/video/11.mp4"  width="900" height="600"></video>
                             </div>
                             <div class="videobox" id="video2">
                                 <a class="close"><span aria-hidden="true">x</span></a>
-                                <video controls="controls" src="https://liuhuatao123456.oss-cn-hangzhou.aliyuncs.com/video/11.mp4" width="900" height="600"></video>
+                                <video controls="controls" id="video-js2" src="https://liuhuatao123456.oss-cn-hangzhou.aliyuncs.com/video/11.mp4" width="900" height="600"></video>
                             </div>
                             <div class="videobox" id="video3">
                                 <a class="close"><span aria-hidden="true">x</span></a>
-                                <video controls="controls" src="https://liuhuatao123456.oss-cn-hangzhou.aliyuncs.com/video/11.mp4" width="900" height="600"></video>
+                                <video controls="controls"  id="video-js3" src="https://liuhuatao123456.oss-cn-hangzhou.aliyuncs.com/video/11.mp4" width="900" height="600"></video>
                             </div>
 
                         </div>
@@ -495,7 +495,20 @@
         $('.close').click(function(){
             $('.theme-popover-mask').hide();
             $('.videobox').fadeOut(200);
+            stopVideo();
         })
+
+        var video1 = document.getElementById("video-js1");
+        var video2 = document.getElementById("video-js2");
+        var video3 = document.getElementById("video-js3");
+        function stopVideo(){
+            video1.pause();
+            video1.currentTime = 0;
+            video2.pause();
+            video2.currentTime = 0;
+            video3.pause();
+            video3.currentTime = 0;
+        }
 
     });
 </script>
