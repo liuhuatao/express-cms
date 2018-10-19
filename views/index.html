@@ -265,7 +265,7 @@
 
                             <div class="theme-popover-mask"></div>
                             <div class="videobox" id="video1">
-                                <a class="close" onclick="player.videoPause()"><span aria-hidden="true">x</span></a>
+                                <a class="close" ><span aria-hidden="true">x</span></a>
                                 <video controls="controls" id="video-js1" src="https://liuhuatao123456.oss-cn-hangzhou.aliyuncs.com/video/11.mp4"  width="900" height="600"></video>
                             </div>
                             <div class="videobox" id="video2">
@@ -482,16 +482,23 @@
             $('.theme-popover-mask').show();
             $('.theme-popover-mask').height($(document).height());
             $('#video1').fadeIn(200);
+            var video1 = document.getElementById("video-js1");
+            video1.play();
         });
         $('.onlick2').click(function(){
             $('.theme-popover-mask').show();
             $('.theme-popover-mask').height($(document).height());
             $('#video2').fadeIn(200);
+            var video2 = document.getElementById("video-js2");
+            video2.play();
         });
         $('.onlick3').click(function(){
             $('.theme-popover-mask').show();
             $('.theme-popover-mask').height($(document).height());
             $('#video3').fadeIn(200);
+            var video3 = document.getElementById("video-js3");
+            video3.play();
+
         });
         $('.close').click(function(){
             $('.theme-popover-mask').hide();
@@ -499,10 +506,10 @@
             stopVideo();
         })
 
-        var video1 = document.getElementById("video-js1");
-        var video2 = document.getElementById("video-js2");
-        var video3 = document.getElementById("video-js3");
         function stopVideo(){
+            var video1 = document.getElementById("video-js1");
+            var video2 = document.getElementById("video-js2");
+            var video3 = document.getElementById("video-js3");
             video1.pause();
             video1.currentTime = 0;
             video2.pause();
