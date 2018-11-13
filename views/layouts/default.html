@@ -1,13 +1,14 @@
 <!doctype html>
-<html class="no-js" lang="en" ng-app="mainApp" >
+<html class="no-js" lang="en" ng-app="mainApp"  ng-controller="bodyController">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>陈俊毅艺术世界,陈俊毅</title>
-    <meta name="description" content="">
+    <title>陈俊毅的艺术世界-{% raw %}{{title}}{% endraw %}</title>
+    <meta name="description" content="{% raw %}{{content}}{% endraw %}">
+    <mata name="keywords" content="陈俊毅,陈俊毅艺术世界-{% raw %}{{title}}{% endraw %}"></mata>
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <mata name="keywords" content="陈俊毅,陈俊毅艺术世界"></mata>
     <!-- favicon
     ============================================ -->
     <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.png">
@@ -31,7 +32,7 @@
     <script src="/js/vendor/jquery-1.12.0.min.js"></script>
 </head>
 
-<body ng-controller="bodyController">
+<body>
 <!--[if lt IE 8]>
 <p class="browserupgrade">您正在使用 <strong>过时的</strong>浏览器.请 <a href="http://browsehappy.com/">点击这里</a> 升级您的浏览器</p>
 <![endif]-->

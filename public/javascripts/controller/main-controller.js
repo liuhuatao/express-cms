@@ -91,7 +91,31 @@ mainApp.controller('bodyController', function ($rootScope, $scope, mainService) 
     $rootScope.isActive = isActive;
     $rootScope.goUrl = goUrl;
     $rootScope.router = router;
-
+    if (router == 'works') {
+        $rootScope.title = '艺术作品';
+        $rootScope.content = '艺术作品';
+    } else if (router == 'director') {
+        $rootScope.title = '导演艺术';
+        $rootScope.content = '导演艺术';
+    } else if (router == 'about') {
+        $rootScope.title = '个人简介';
+        $rootScope.content = '个人简介';
+    } else if (router == 'photo') {
+        $rootScope.title = '相册';
+        $rootScope.content = '相册';
+    } else if (router == 'research') {
+        $rootScope.title = '学术';
+        $rootScope.content = '学术';
+    } else if (router == 'news') {
+        $rootScope.title = '动态';
+        $rootScope.content = '动态';
+    } else if (router == 'derivative') {
+        $rootScope.title = '衍生品';
+        $rootScope.content = '衍生品';
+    }else if (router == 'contact') {
+        $rootScope.title = '联系我们';
+        $rootScope.content = '联系我们';
+    }
 
     function isActive(item) {
         if (router === item) {
@@ -440,7 +464,7 @@ mainApp.controller('newsController', function ($scope, $http, mainService, $root
 });
 
 //文章详情
-mainApp.controller('articleController', function ($scope, $http, mainService, $sce) {
+mainApp.controller('articleController', function ($scope, $http, mainService, $sce, $rootScope) {
 
     function init() {
         var id = mainService.getQueryStringByName('id');
@@ -452,6 +476,8 @@ mainApp.controller('articleController', function ($scope, $http, mainService, $s
             $scope.article = res.data.data;
             $scope.article.content = $scope.article.content.replaceAll('/upload/editor', "http://chenjunyi.liuhuatao.com/upload/editor");
             $scope.article.content = $sce.trustAsHtml($scope.article.content);
+            $rootScope.title = $scope.article.title;
+            $rootScope.content = $scope.article.content;
             console.log($scope.article);
         }, function (err) {
             console.log(JSON.stringify(err));
@@ -557,6 +583,7 @@ mainApp.controller('chubanzhuzuoController', function ($scope, $http, mainServic
             $scope.article.content = $scope.article.content.replaceAll('/upload/editor', "http://chenjunyi.liuhuatao.com/upload/editor");
             $scope.article.content = $sce.trustAsHtml($scope.article.content);
             console.log($scope.article);
+
         }, function (err) {
             console.log(JSON.stringify(err));
         })
