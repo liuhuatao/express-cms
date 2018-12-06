@@ -148,7 +148,10 @@
   var tis;
 
   function googleTranslateElementInit() {
-    new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+    new google.translate.TranslateElement(  {
+        pageLanguage: 'cn',
+        includedLanguages: 'en,zh-CN'
+    }, 'google_translate_element');
   }
 
   var _hmt = _hmt || [];
