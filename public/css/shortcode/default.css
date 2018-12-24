@@ -940,7 +940,7 @@ textarea:focus {
  }
  .bg-1 {background: url(https://liuhuatao123456.oss-cn-hangzhou.aliyuncs.com/img/bg/1.jpg);}
  .bg-2 { background: url(https://liuhuatao123456.oss-cn-hangzhou.aliyuncs.com/img/bg/2.jpg);}
- .bg-3 { background: url(https://liuhuatao123456.oss-cn-hangzhou.aliyuncs.com/img/bg/3.jpg);}
+ .bg-3 { background: url(../../img/bg/3.jpg); height: 434px;}
  .bg-4 { background: url(https://liuhuatao123456.oss-cn-hangzhou.aliyuncs.com/img/bg/4.jpg);}
  .bg-5 { background: url(https://liuhuatao123456.oss-cn-hangzhou.aliyuncs.com/img/bg/5.jpg);}
  .bg-6 { background: url(https://liuhuatao123456.oss-cn-hangzhou.aliyuncs.com/img/bg/6.jpg);}
