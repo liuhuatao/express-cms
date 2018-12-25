@@ -588,7 +588,7 @@ header.header-4 {
     margin: 0 auto;
   }
   .elements1 .main-menu ul li a {
-    padding: 6px 3px;
+    padding: 6px 3px!important;
   }
   .elements1 .main-menu ul li a {
     font-size: 12px;

@@ -28,14 +28,14 @@
                     <li ng-class="cid==146?'active':''"><a href="/news.html?cid=146">媒体报道</a></li>
                 </ul>
                 <div class="row mb-20  research-list" ng-repeat="item in list.data">
-                    <div class="col-xs-4 col-sm-4 col-md-4">
+                    <div class="col-xs-11 col-sm-11 col-md-4">
                         <div class="product-wrapper">
                             <div class="product-img">
                                 <a ng-href="{% raw %}{{'/article.html?id='+item.id}}{% endraw %}"><img alt="" ng-src="{% raw %}{{item.imgurl[0]}}{% endraw %}"></a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xs-7 col-sm-7 col-md-8">
+                    <div class="col-xs-11 col-sm-11 col-md-8">
                         <div class="product-content new-list">
                             <div class="pro-title">
                                 <h3><a ng-href="{% raw %}{{'/article.html?id='+item.id}}{% endraw %}" ng-bind="item.title"></a></h3>
