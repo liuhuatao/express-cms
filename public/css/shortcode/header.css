@@ -571,6 +571,7 @@ header.header-4 {
 }
 .elements1.header-pos {
   padding: 0 15px;
+  text-align: center;
 }
 .elements1 .logo {
   padding-top: 16px;
@@ -580,4 +581,20 @@ header.header-4 {
 }
 .elements1 .main-menu ul li a {
   padding: 25px 18px;
+}
+@media (max-width: 767px) {
+  .logo a img{
+    width: 150px;
+    margin: 0 auto;
+  }
+  .elements1 .main-menu ul li a {
+    padding: 6px 3px;
+  }
+  .elements1 .main-menu ul li a {
+    font-size: 12px;
+  }
+  .index_inner .solgan img {
+    width: 375px;
+    margin-top: 250px;
+  }
 }
