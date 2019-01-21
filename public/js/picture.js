@@ -63,11 +63,11 @@ $(function() {
 
 function calcPicHover() {
     $(".indexbody-right").mousemove(function() {
-        $(this).css("cursor", "url(images/next.cur), auto");
+        $(this).css("cursor", "url(img/next.cur), auto");
         $(this).attr("title", "�����һ�� ֧�ּ����ҡ���ҳ")
     });
     $(".indexbody-left").mousemove(function() {
-        $(this).css("cursor", "url(images/pre.cur),auto");
+        $(this).css("cursor", "url(img/pre.cur),auto");
         $(this).attr("title", "�����һ�� ֧�ּ��������ҳ")
     })
 }
@@ -241,7 +241,7 @@ var controlPicture = {
     checkAndLoadImg: function(e, d, c, a) {
         var b = new Image();
         b.src = e;
-        var f = c ? "images/grey1.gif": "images/loading2.gif";
+        var f = c ? "img/grey1.gif": "img/loading2.gif";
         if (b.complete) {
             $(d).css("display", "none");
             d.src = e;
