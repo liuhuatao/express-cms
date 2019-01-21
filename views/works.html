@@ -8,14 +8,6 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12 text-center">
-                        <!--<div class="breadcrumb-wrap mt-20">-->
-                            <!--<ul class="breadcrumb-list text-center">-->
-                                <!--<li><a href="index.html">首页 </a></li>-->
-                                <!--<li><a href="works.html?cid=130">艺术作品 </a></li>-->
-                                <!--<li><a href="javascript:location.reload();" ng-bind="category.title"></a></li>-->
-                            <!--</ul>-->
-                        <!--</div>-->
-                        <!--<h2 class="breadcrumb-title text-white uppercase  mt-20">艺术作品</h2>-->
                     </div>
                 </div>
             </div>
@@ -27,37 +19,51 @@
                 </ul>
                 <div class="col-md-12 col-sm-8">
                     <div class="shop-page-bar">
-                        <div class="">
-                            <div class="tab-content">
-                                <div role="tabpanel" class="tab-pane active" id="home">
-                                    <div class="row">
-                                        <div class="col-md-4 col-sm-6" ng-repeat="item in list.data">
-                                            <div class="product-wrapper mb-40">
-                                                <div class="product-img">
-                                                    <a href="#"><img ng-src="{% raw %}{{item.imgurl[0]}}{% endraw %}" alt="" /></a>
-                                                    <div class="product-action" ng-click="getDocumentById(item.id)">
-                                                        <a href="#" data-toggle="modal" data-target="#productModal"><i class="pe-7s-look"></i></a>
-                                                    </div>
-                                                </div>
-                                                <div class="product-content">
-                                                    <!--<div class="pro-title">
-                                                        <h3><a href="product-details.html" ng-bind="item.catename">抽象画</a></h3>
-                                                    </div>-->
-                                                    <div class="price-reviews">
-                                                        <div class="price-box">
-                                                            <span class="price product-price" ng-bind="item.title"></span>
-                                                        </div>
-                                                        <a class="s-btn pull-right" ng-click="goUrl(item.link_id)" ng-show="item.link_id"><i class="fa fa-commenting-o mr-10"></i>艺术评论</a>
-                                                    </div>
-
-
-                                                </div>
-                                            </div>
-                                        </div>
+                        <div class="indexBody">
+                            <div class="btn-float"><a class="maxBtn-l" href="javascript:void(0);"></a><a class="maxBtn-r" href="javascript:void(0);"></a></div>
+                            <div class="indexbody-main">
+                                <div class="indexbody-left"></div>
+                                <div class="indexbody-right"></div>
+                            </div>
+                            <div class="demo w990">
+                                <div class="maxPic-box">
+                                    <div class="maxPic">
+                                        <div class="maxPicBox"><span></span><img id="mainPic" src="img/bigPic/1.jpg"/></div>
                                     </div>
                                 </div>
-                                <div class="content-sortpagibar text-center">
-                                    <my-pagination page-option="option"></my-pagination>
+
+                                <div id="tplist" class="w-width clearfix">
+                                    <div class="Up-tuzu" style="display: none">
+                                        <!--<a class="outpic" href="/" id="prevUrl"><span></span><img src="images/prev.jpg" /></a>
+                                        <a class="inpic" href="/">上一组</a><span class="prevspan"></span>-->
+                                    </div>
+
+                                    <div class="bottom-lists">
+                                        <div class="PicBtn-a PicBtn-a-l"><a class="PicBtn-left" href="javascript:void(0);"></a></div>
+                                        <div class="minPic">
+                                            <ul class="gallery_demo_unstyled">
+                                                <li id="tu_1"><span></span><a href="javascript:void(0);"><img src="img/thumbPic/1.jpg" /></a></li>
+                                                <li id="tu_2"><span></span><a href="javascript:void(0);"><img src="img/thumbPic/2.jpg"/></a></li>
+                                                <li id="tu_3"><span></span><a href="javascript:void(0);"><img src="img/thumbPic/3.jpg"/></a></li>
+                                                <li id="tu_4"><span></span><a href="javascript:void(0);"><img src="img/thumbPic/4.jpg"/></a></li>
+                                                <li id="tu_5"><span></span><a href="javascript:void(0);"><img src="img/thumbPic/5.jpg"/></a></li>
+                                                <li id="tu_6"><span></span><a href="javascript:void(0);"><img src="img/thumbPic/6.jpg"/></a></li>
+                                                <li id="tu_7"><span></span><a href="javascript:void(0);"><img src="img/thumbPic/7.jpg"/></a></li>
+                                                <li id="tu_8"><span></span><a href="javascript:void(0);"><img src="img/thumbPic/8.jpg"/></a></li>
+                                                <li id="tu_9"><span></span><a href="javascript:void(0);"><img src="img/thumbPic/9.jpg"/></a></li>
+                                                <li id="tu_10"><span></span><a href="javascript:void(0);"><img src="img/thumbPic/10.jpg"/></a></li>
+                                                <li id="tu_11"><span></span><a href="javascript:void(0);"><img src="img/thumbPic/11.jpg" /></a></li>
+                                                <li id="tu_12"><span></span><a href="javascript:void(0);"><img src="img/thumbPic/12.jpg" /></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="PicBtn-a PicBtn-a-r"><a class="PicBtn-right" href="javascript:void(0);"></a></div>
+                                    </div>
+                                    <div class="Next-tuzu" style="display: none">
+                                        <!--<a class="outpic" href="/" id="nextUrl"><span></span><img src="images/next.jpg"></a>
+                                            <a class="inpic" href="/">下一组</a>
+                                            <span class="nextspan"></span>-->
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
@@ -68,4 +74,104 @@
 
 
     </div>
+<script type="text/javascript">
+
+    $(function(){
+        var prevDiv = $(".Up-tuzu");
+        var nextDiv = $(".Next-tuzu");
+        if(prevDiv.find("a").length<1){
+            prevDiv.html("<p style='line-height:120px;color:#666;'><a href='' id='prevUrl'>meiyoule</a></p>");
+        }
+        if(nextDiv.find("a").length<1){
+            nextDiv.html("<p style='line-height:120px;color:#666;'><a href='' id='nextUrl'>meiyoule</a></p>");
+        }
+    });
+    var selectKey = "1";
+    var picList = [{
+        "picPos": 1,
+        "pid": "1540637",
+        "bigPic": "img/bigPic/1.jpg",
+        "bigPic": "img/bigpic/1.jpg",
+        "thumbPic": "img/thumbPic/1.jpg"
+    },
+        {
+            "picPos": 2,
+            "pid": "1520876",
+            "bigPic": "img/bigPic/2.jpg",
+            "bigPic": "img/bigPic/2.jpg",
+            "thumbPic": "img/thumbPic/2.jpg"
+        },
+        {
+            "picPos": 3,
+            "pid": "1520550",
+            "bigPic": "img/bigPic/3.jpg",
+            "bigPic": "img/bigPic/3.jpg",
+            "thumbPic": "img/thumbPic/3.jpg"
+        },
+        {
+            "picPos": 4,
+            "pid": "1520549",
+            "bigPic": "img/bigPic/4.jpg",
+            "bigPic": "img/bigPic/4.jpg",
+            "thumbPic": "img/thumbPic/4.jpg"
+        },
+        {
+            "picPos": 5,
+            "pid": "1520548",
+            "bigPic": "img/bigPic/5.jpg",
+            "bigPic": "img/bigPic/5.jpg",
+            "thumbPic": "img/thumbPic/5.jpg"
+        },
+        {
+            "picPos": 6,
+            "pid": "1520547",
+            "bigPic": "img/bigPic/6.jpg",
+            "bigPic": "img/bigPic/6.jpg",
+            "thumbPic": "img/thumbPic/6.jpg"
+        },
+        {
+            "picPos": 7,
+            "pid": "1520546",
+            "bigPic": "img/bigPic/7.jpg",
+            "bigPic": "img/bigPic/7.jpg",
+            "thumbPic": "img/thumbPic/7.jpg"
+        },
+        {
+            "picPos": 8,
+            "pid": "1520545",
+            "bigPic": "img/bigPic/8.jpg",
+            "bigPic": "img/bigPic/8.jpg",
+            "thumbPic": "img/thumbPic/8.jpg"
+        },
+        {
+            "picPos": 9,
+            "pid": "1520544",
+            "bigPic": "img/bigPic/9.jpg",
+            "bigPic": "img/bigPic/9.jpg",
+            "thumbPic": "img/thumbPic/9.jpg"
+        },
+        {
+            "picPos": 10,
+            "pid": "1520543",
+            "bigPic": "img/bigPic/10.jpg",
+            "bigPic": "img/bigPic/10.jpg",
+            "thumbPic": "img/thumbPic/10.jpg"
+        },
+        {
+            "picPos": 11,
+            "pid": "1520543",
+            "bigPic": "img/bigPic/11.jpg",
+            "bigPic": "img/bigPic/11.jpg",
+            "thumbPic": "img/thumbPic/11.jpg"
+        },
+        {
+            "picPos": 12,
+            "pid": "1520543",
+            "bigPic": "img/bigPic/12.jpg",
+            "bigPic": "img/bigPic/12.jpg",
+            "thumbPic": "img/thumbPic/12.jpg"
+        }];
+</script>
+<script type="text/javascript" src="js/picture.js"></script>
+
 {% endblock %}
